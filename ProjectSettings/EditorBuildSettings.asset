@@ -4,5 +4,83 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 0
+    path: Assets/Scenes/introScene.unity
+    guid: a41e497376577294b85ec6553cff8185
+  - enabled: 0
+    path: Assets/Scenes/MainMenu.unity
+    guid: 2c3ba5941a56f394ab6e41b66cce5d82
+  - enabled: 0
+    path: Assets/Scenes/createMenu.unity
+    guid: a166d4a601a8f6d4ca1ebbea934426cf
+  - enabled: 0
+    path: Assets/Scenes/AR Sceans/Learn.unity
+    guid: 19dde8f185e10df4f903f8cf14179c13
+  - enabled: 0
+    path: Assets/Scenes/Circuitpuzzle.unity
+    guid: b3bbba222e5ca0c42b631fc63ca0db4e
+  - enabled: 0
+    path: Assets/Scenes/ExploreLoader.unity
+    guid: 6b8c67b4061ec4a49a2c200a6acc06ea
+  - enabled: 0
+    path: Assets/Scenes/AR Sceans/Explore 1.unity
+    guid: 222a2920c7a05f249bf9249e61ae6ed2
+  - enabled: 0
+    path: Assets/Scenes/CreateLoading.unity
+    guid: 5fe48614781ba9e468d275e39c20429f
+  - enabled: 0
+    path: Assets/Scenes/AR Sceans/Explore 2.unity
+    guid: ef99e925c4b59624aa0824b754bc9fe2
+  - enabled: 0
+    path: Assets/Scenes/LearnLoading.unity
+    guid: 9b3a2dcf68ae7bf408626db3e586ebb3
+  - enabled: 0
+    path: Assets/Scenes/Quiz.unity
+    guid: 6264ed50d65c03c478b6de01c3623394
+  - enabled: 0
+    path: Assets/Scenes/AR Sceans/Explore 3.unity
+    guid: 6cf817c137f3ba34992c9b12bf24d9c2
+  - enabled: 0
+    path: Assets/Scenes/AR Sceans/Explore 4.unity
+    guid: a6b05c9a6809ba14ea1fe107c9562f17
+  - enabled: 0
+    path: Assets/Scenes/ModeMenu.unity
+    guid: fbe35c860a5e4e642ae080b27b458dba
+  - enabled: 0
+    path: Assets/Scenes/ExploreMenu.unity
+    guid: db26daf7cfe81b44a92e4fe83a6f062a
+  - enabled: 0
+    path: Assets/Scenes/ProfileView.unity
+    guid: 3aa46988bdd10764386e80883eedc598
+  - enabled: 0
+    path: Assets/Scenes/CharacterSelect.unity
+    guid: 4111b048a0d9b4f488ed412fe5de78a4
+  - enabled: 0
+    path: Assets/Scenes/DIY.unity
+    guid: 016c895947fbb5e42b5428f8f8baa8ea
+  - enabled: 0
+    path: Assets/Scenes/LearnStart.unity
+    guid: 69f3771d6a72692438311ea773c7ced2
+  - enabled: 0
+    path: Assets/AIMLBot/Scenes/19_botL1.unity
+    guid: 3cc0d80a5e5b0284b9acad3fc27e950b
+  - enabled: 0
+    path: Assets/AIMLBot/Scenes/20_botL2.unity
+    guid: fd9b830bd355fb44eb341f1e973f4834
+  - enabled: 0
+    path: Assets/AIMLBot/Scenes/21_botL3.unity
+    guid: 7af332437edc43945a34787718976a0b
+  - enabled: 0
+    path: Assets/AIMLBot/Scenes/22_botL4.unity
+    guid: bb335a15c88e3694f983d60ec8356167
+  - enabled: 0
+    path: Assets/AIMLBot/Scenes/23_botL5.unity
+    guid: 7c2bfbc9f3bec6a42b8003a0e972ab80
+  - enabled: 0
+    path: Assets/AIMLBot/Scenes/24_botMain.unity
+    guid: 970e04598c7eca048a7071158d018d32
+  - enabled: 1
+    path: Assets/Scenes/AR Sceans/Explore 6.unity
+    guid: fddb194919025dd49a470659197e766e
   m_configObjects: {}

@@ -1,0 +1,304 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<aiml>
+  <!-- Free software (c) 2001-2003 ALICE A.I. Foundation.   -->
+  <!-- This program is open source code released under -->
+  <!-- the terms of the GNU General Public License     -->
+  <!-- as published by the Free Software Foundation.   -->
+  <!-- Complies with AIML 1.0 Tag Set Specification -->
+  <!-- as adopted by the ALICE A.I. Foundation.  -->
+  <!-- Annotated Version updated September 2003 -->
+<category>
+  <pattern>ARDUINO UNO</pattern>
+  <template>The Arduino Uno is a microcontroller board used for electronics projects. It can read inputs from switches and sensors and control outputs such as LEDs and motors.</template>
+</category>
+
+<category>
+  <pattern>RASPBERRY PI</pattern>
+  <template>A Raspberry Pi is a small computer that runs an operating system and is used for coding, robotics, and IoT projects.</template>
+</category>
+
+<category>
+  <pattern>BREADBOARD</pattern>
+  <template>A breadboard is a tool used to build electronic circuits without soldering. It allows easy testing and modification of circuits.</template>
+</category>
+
+<category>
+  <pattern>LCD</pattern>
+  <template>An LCD is a liquid crystal display, for example 16x2, that can show 16 characters per row on 2 rows.</template>
+</category>
+
+<category>
+  <pattern>L298N</pattern>
+  <template>The L298N is a motor driver module that allows a microcontroller to control the speed and direction of a DC motor.</template>
+</category>
+
+<category>
+  <pattern>SERVO MOTOR</pattern>
+  <template>A servo motor is a motor that moves to a specific angle when given a signal, often used in robotics and automation.</template>
+</category>
+
+<category>
+  <pattern>CONNECTING WIRES</pattern>
+  <template>Connecting wires are used to link electronic components in a circuit, allowing electricity to flow between them.</template>
+</category>
+
+<category>
+  <pattern>LED</pattern>
+  <template>Light Emitting Diode. Different LED colors are used for various signals: red for warnings, green for safe conditions, yellow for caution, and white for general lighting.</template>
+</category>
+
+<category>
+  <pattern>RESISTOR</pattern>
+  <template>A resistor limits electrical current in a circuit to protect components from excessive voltage.</template>
+</category>
+
+<category>
+  <pattern>PUSH BUTTON</pattern>
+  <template>A push button is used to complete or break a circuit when pressed, commonly used in switches.</template>
+</category>
+
+<category>
+  <pattern>POTENTIOMETER</pattern>
+  <template>A potentiometer is a variable resistor used to adjust voltage, such as in volume control and light dimmers.</template>
+</category>
+
+<category>
+  <pattern>BATTERY</pattern>
+  <template>A 9V battery provides power to electronic circuits that require higher voltage than standard AA or AAA batteries.</template>
+</category>
+
+<category>
+  <pattern>RELAY</pattern>
+  <template>A relay is an electrically operated switch that can control high-power devices with a small electrical signal.</template>
+</category>
+
+<category>
+  <pattern>BUZZER</pattern>
+  <template>A buzzer produces sound when powered, often used for alarms and notifications.</template>
+</category>
+
+<category>
+  <pattern>DHT</pattern>
+  <template>Digital Humidity and Temperature sensor. It is commonly used in weather and environmental monitoring projects. The DHT22 is more accurate and has a much wider temperature and humidity range, while the DHT11 is significantly cheaper and suitable for basic applications.</template>
+</category>
+
+<category>
+  <pattern>ULTRASONIC</pattern>
+  <template>An ultrasonic sensor measures distance by sending and receiving sound waves, often used in obstacle detection.</template>
+</category>
+
+<category>
+  <pattern>PIR</pattern>
+  <template>A PIR (Passive Infra Red) sensor detects motion by sensing infrared radiation from moving objects, such as people or animals.</template>
+</category>
+
+<category>
+  <pattern>LDR</pattern>
+  <template>An LDR (Light Dependent Resistor) changes resistance based on light levels and is used in automatic lighting systems.</template>
+</category>
+
+<category>
+  <pattern>WATER LEVEL SENSOR</pattern>
+  <template>A water level sensor detects the amount of water in a container, commonly used in water tanks and flood detection systems.</template>
+</category>
+
+<category>
+  <pattern>SOIL MOISTURE SENSOR</pattern>
+  <template>A soil moisture sensor measures the water content in soil to help automate plant watering systems.</template>
+</category>
+
+<category>
+  <pattern>IR</pattern>
+  <template>An IR (Infrared) sensor detects infrared light and is used in remote controls and object detection systems.</template>
+</category>
+
+<!-- SMART DAY-NIGHT LIGHT CONTROLLER -->
+<category>
+  <pattern>WHAT IS THE PURPOSE OF THE SMART DAY-NIGHT LIGHT CONTROLLER</pattern>
+  <template>It automatically turns lights ON at night and OFF during the day to save energy.</template>
+</category>
+
+<category>
+  <pattern>HOW LDR WORKS WHEN SURROUNDINGS BECOME DARK</pattern>
+  <template>The LDR (Light Dependent Resistor) detects low light, and the Arduino turns the LED or lamp ON.</template>
+</category>
+
+<category>
+  <pattern>HOW LDR WORKS WHEN THERE IS BRIGHT DAYLIGHT</pattern>
+  <template>The LDR senses high light, and the Arduino switches the LED or lamp OFF.</template>
+</category>
+
+<category>
+  <pattern>HOW CAN THIS SYSTEM BE IMPROVED SMART LIGHT</pattern>
+  <template>By adding IoT control, brightness adjustment, or a real-time clock for scheduling.</template>
+</category>
+
+<category>
+  <pattern>HOW SHOULD THE COMPONENTS BE WIRED FOR SMART DAY NIGHT LIGHT CONTROLLER</pattern>
+  <template>
+    <b>Wiring Connections:</b>
+    <ul>
+      <li>LDR one end → Arduino 5V</li>
+      <li>LDR other end → Arduino A0 (and 10kΩ resistor to GND)</li>
+      <li>LED anode → Arduino D7 (through 220Ω resistor)</li>
+      <li>LED cathode → Arduino GND</li>
+    </ul>
+    <br/>
+    <b>Note:</b>
+    The LDR and 10kΩ resistor form a voltage divider circuit that lets the Arduino sense changing light levels.
+  </template>
+</category>
+
+<!-- AUTOMATIC ROOM LIGHT CONTROLLER -->
+<category>
+  <pattern>WHY DO WE NEED AN AUTOMATIC LIGHT CONTROLLER</pattern>
+  <template>To save electricity by switching lights on only when someone is present.</template>
+</category>
+
+<category>
+  <pattern>HOW DOES THE PIR SENSOR WORK</pattern>
+  <template>The PIR sensor detects changes in infrared radiation (heat). While it is mainly used to sense human presence, it can also detect other warm-blooded animals or strong heat sources. The light turns off automatically after a short delay when no motion is detected.</template>
+</category>
+
+<category>
+  <pattern>CAN THIS SYSTEM BE INSTALLED IN MULTIPLE ROOMS</pattern>
+  <template>Yes, each room can have its own PIR sensor connected to the system.</template>
+</category>
+
+<category>
+  <pattern>HOW CAN WE IMPROVE THE SYSTEM FURTHER</pattern>
+  <template>By adding daylight sensors so lights do not turn on during daytime.</template>
+</category>
+
+<category>
+  <pattern>HOW SHOULD THE PIR SENSOR AND LED BE WIRED IN AUTOMATIC ROOM LIGHT CONTROLLER</pattern>
+  <template>
+    <b>Wiring Connections:</b>
+    <ul>
+      <li>PIR VCC → Arduino 5V</li>
+      <li>PIR GND → Arduino GND</li>
+      <li>PIR OUT → Arduino D2</li>
+      <li>LED anode → Arduino D7 (through resistor)</li>
+      <li>LED cathode → Arduino GND</li>
+    </ul>
+  </template>
+</category>
+
+<!-- TOUCHLESS DOORBELL -->
+<category>
+  <pattern>WHY IS A TOUCHLESS DOORBELL IMPORTANT</pattern>
+  <template>It prevents the spread of germs and provides a hygienic alternative.</template>
+</category>
+
+<category>
+  <pattern>HOW DOES THE IR SENSOR DETECT A HAND WAVE</pattern>
+  <template>The sensor emits infrared light, which reflects when a hand comes close. The Arduino triggers a buzzer and can also light up an LED for a visual alert.</template>
+</category>
+
+<category>
+  <pattern>CAN THE DISTANCE BE ADJUSTED</pattern>
+  <template>Yes, the sensing range (5 to 10 cm) can be set in the Arduino code.</template>
+</category>
+
+<category>
+  <pattern>HOW CAN THIS SYSTEM BE MADE MORE ADVANCED</pattern>
+  <template>By connecting it to a smart home system or adding a camera for visitor identification.</template>
+</category>
+
+<category>
+  <pattern>HOW SHOULD THE IR SENSOR BUZZER AND LED BE WIRED IN TOUCHLESS DOORBELL SYSTEM</pattern>
+  <template>
+    <b>Wiring Connections:</b>
+    <ul>
+      <li>IR Sensor VCC → Arduino 5V</li>
+      <li>IR Sensor GND → Arduino GND</li>
+      <li>IR Sensor OUT → Arduino D3</li>
+      <li>Buzzer + → Arduino D8</li>
+      <li>Buzzer - → Arduino GND</li>
+      <li>(Optional) LED anode → Arduino D7 (through 220Ω resistor) and LED cathode → Arduino GND</li>
+    </ul>
+  </template>
+</category>
+
+<!-- TEMPERATURE CONTROLLED FAN -->
+<category>
+  <pattern>WHY WE USE A TEMPERATURE CONTROLLED FAN</pattern>
+  <template>It provides comfort and saves energy by running only when needed as per the temperature conditions.</template>
+</category>
+
+<category>
+  <pattern>WHAT DOES THE DHT11 SENSOR DO</pattern>
+  <template>It measures temperature and humidity continuously.</template>
+</category>
+
+<category>
+  <pattern>WHAT HAPPENS IF THE ROOM TEMPERATURE GOES ABOVE THE SET LEVEL</pattern>
+  <template>The Arduino turns the fan on automatically.</template>
+</category>
+
+<category>
+  <pattern>HOW CAN THIS SYSTEM BE IMPROVED TEMPERATURE FAN</pattern>
+  <template>By adding multiple fans, speed control, or IoT for remote monitoring.</template>
+</category>
+
+<category>
+  <pattern>HOW SHOULD THE DHT11 SENSOR AND DC MOTOR BE WIRED IN TEMPERATURE BASED FAN CONTROLLER</pattern>
+  <template>
+    <b>Wiring Connections:</b>
+    <ul>
+      <li>DHT11 VCC → Arduino 5V</li>
+      <li>DHT11 GND → Arduino GND</li>
+      <li>DHT11 DATA → Arduino D4</li>
+      <li>Motor + → Arduino D5</li>
+      <li>Motor - → Arduino GND</li>
+      <li>(Optional) Diode across motor: Cathode → Motor +, Anode → Motor -</li>
+    </ul>
+    <br/>
+    <b>Note:</b>
+    Use a small 5V toy motor only. For higher current motors, a transistor or motor driver (L298N) is required.
+  </template>
+</category>
+
+<!-- CONTACTLESS DOORWAY -->
+<category>
+  <pattern>WHY IS A CONTACTLESS DOORWAY USEFUL</pattern>
+  <template>It avoids touching handles, reducing germ spread, and helps when carrying things.</template>
+</category>
+
+<category>
+  <pattern>HOW DOES THE ULTRASONIC SENSOR DETECT PEOPLE</pattern>
+  <template>It measures distance using sound waves, detecting when someone comes within range (e.g., 30 cm).</template>
+</category>
+
+<category>
+  <pattern>WHAT HAPPENS WHEN SOMEONE APPROACHES THE DOOR</pattern>
+  <template>The LED turns on, and the servo motor rotates to open the door.</template>
+</category>
+
+<category>
+  <pattern>DOES THE DOOR CLOSE AUTOMATICALLY</pattern>
+  <template>Yes, after a short delay, the servo rotates back to close the door.</template>
+</category>
+
+<category>
+  <pattern>HOW SHOULD THE ULTRASONIC SENSOR SERVO MOTOR AND LED BE WIRED IN CONTACTLESS DOORWAY</pattern>
+  <template>
+    <b>Wiring Connections:</b>
+    <ul>
+      <li>Sensor VCC → Arduino 5V</li>
+      <li>Sensor GND → Arduino GND</li>
+      <li>Sensor TRIG → Arduino D9</li>
+      <li>Sensor ECHO → Arduino D10</li>
+      <li>Servo VCC (red) → Arduino 5V</li>
+      <li>Servo GND (brown) → Arduino GND</li>
+      <li>Servo Signal (orange) → Arduino D6</li>
+      <li>LED anode → Arduino D7</li>
+      <li>LED cathode → Arduino GND</li>
+    </ul>
+    <br/>
+    <b>Note:</b>
+    If the servo draws more power, use an external 5V supply and connect its ground to Arduino GND.
+  </template>
+</category>
+
+</aiml>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QCARConfig>
+  <Tracking>
+    <ImageTarget name="wire" size="1.000000 1.000000" />
+    <ImageTarget name="led" size="1.000000 1.000000" />
+    <ImageTarget name="motor" size="1.000000 1.000000" />
+    <ImageTarget name="btn" size="1.000000 1.000000" />
+    <ImageTarget name="bb" size="1.000000 1.000000" />
+    <ImageTarget name="arudino" size="1.000000 1.000000" />
+  </Tracking>
+</QCARConfig>

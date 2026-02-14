@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QCARConfig>
+  <Tracking>
+    <ImageTarget name="waterlevelsensor" size="1.000000 1.000000" />
+    <ImageTarget name="soilmoisturesensor" size="1.000000 1.000000" />
+    <ImageTarget name="resistor" size="1.000000 1.000000" />
+    <ImageTarget name="relay" size="1.000000 1.000000" />
+    <ImageTarget name="raspi4" size="1.000000 1.000000" />
+    <ImageTarget name="pushbutton" size="1.000000 1.000000" />
+    <ImageTarget name="potentiometer" size="1.000000 1.000000" />
+    <ImageTarget name="pirsensor" size="1.000000 1.000000" />
+    <ImageTarget name="motordriver" size="1.000000 1.000000" />
+    <ImageTarget name="leds" size="1.000000 1.000000" />
+    <ImageTarget name="ldrlightsensor" size="1.000000 1.000000" />
+    <ImageTarget name="lcdscreen" size="1.000000 1.000000" />
+    <ImageTarget name="jumperwires" size="1.000000 1.000000" />
+    <ImageTarget name="irsensor" size="1.000000 1.000000" />
+    <ImageTarget name="hcsr04" size="1.000000 1.000000" />
+    <ImageTarget name="dht-11" size="1.000000 1.000000" />
+    <ImageTarget name="dcmotor" size="1.000000 1.000000" />
+    <ImageTarget name="buzzer" size="1.000000 1.000000" />
+    <ImageTarget name="breadboard" size="1.000000 1.000000" />
+    <ImageTarget name="arduinouno" size="1.000000 1.000000" />
+    <ImageTarget name="arduinounoshield" size="1.000000 1.000000" />
+    <ImageTarget name="9vbattery" size="1.000000 1.000000" />
+  </Tracking>
+</QCARConfig>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QCARConfig>
+  <Tracking>
+    <ImageTarget name="Battery" size="1.000000 1.000000" />
+    <ImageTarget name="Buzzer" size="1.000000 1.000000" />
+    <ImageTarget name="PushButton" size="1.000000 1.000000" />
+    <ImageTarget name="LED" size="1.000000 1.000000" />
+    <ImageTarget name="ServoMotor" size="1.000000 1.000000" />
+    <ImageTarget name="DC" size="1.000000 1.000000" />
+    <ImageTarget name="LCD" size="1.000000 1.000000" />
+    <ImageTarget name="IR" size="1.000000 1.000000" />
+    <ImageTarget name="LDR" size="1.000000 1.000000" />
+    <ImageTarget name="PIR" size="1.000000 1.000000" />
+    <ImageTarget name="Ultrasonic" size="1.000000 1.000000" />
+    <ImageTarget name="DHT" size="1.000000 1.000000" />
+    <ImageTarget name="Potentiometer" size="1.000000 1.000000" />
+    <ImageTarget name="Resistor" size="1.000000 1.000000" />
+    <ImageTarget name="JumperWires" size="1.000000 1.000000" />
+    <ImageTarget name="Breadboard" size="1.000000 1.000000" />
+    <ImageTarget name="Raspi" size="1.000000 1.000000" />
+    <ImageTarget name="Arduino" size="1.000000 1.000000" />
+  </Tracking>
+</QCARConfig>

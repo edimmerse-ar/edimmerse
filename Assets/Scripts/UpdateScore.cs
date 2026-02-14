@@ -1,0 +1,19 @@
+using Dan.Main;
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+    public class UpdateScore : MonoBehaviour
+    {
+        // Start is called before the first frame update
+        void Start()
+        {
+        
+        }
+
+        // Update is called once per frame
+        public void Submit(int score)
+        {
+			GlobalVariables.updateScore(score);
+		}
+	}
