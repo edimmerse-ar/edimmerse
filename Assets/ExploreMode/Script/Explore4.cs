@@ -12,9 +12,14 @@ public class Explore4 : MonoBehaviour
     private enum ComponentType
     {
         IRSensor,
+        Breadboard,
         Wire1,
         Wire2,
-        Wire3
+        Wire3,
+        Wire4,
+        Wire5,
+        Led,
+        Resistor
     }
 
     private enum ToastMessageType
@@ -107,10 +112,10 @@ public class Explore4 : MonoBehaviour
     {
         toastMessages = new string[6];
         toastMessages[(int)ToastMessageType.ScanMarker] = "Scan the Marker to get started with Activity";
-        // Use PlaceBreadboard slot to indicate placing the IR Sensor in this scene
-        toastMessages[(int)ToastMessageType.PlaceBreadboard] = "Place the IR Sensor near the Arduino";
-        toastMessages[(int)ToastMessageType.PlaceComponents] = "Place all the components (IR Sensor and wires) and connect them as shown";
-        toastMessages[(int)ToastMessageType.NeedBreadboardFirst] = "You need to place the IR Sensor first";
+        // Use PlaceBreadboard slot to indicate placing the Breadboard in this scene
+        toastMessages[(int)ToastMessageType.PlaceBreadboard] = "Place the Breadboard near the Arduino";
+        toastMessages[(int)ToastMessageType.PlaceComponents] = "Place all the components (IR Sensor, breadboard, wires, LED and resistor) and connect them as shown";
+        toastMessages[(int)ToastMessageType.NeedBreadboardFirst] = "You need to place the Breadboard first";
         toastMessages[(int)ToastMessageType.PlaceSelectedFirst] = "First you need to place selected component";
         toastMessages[(int)ToastMessageType.Success] = "Good Job! You have connected the components successfully. Next start with coding.";
     }
@@ -305,11 +310,11 @@ public class Explore4 : MonoBehaviour
     {
         if (activeToastMessage == ToastMessageType.PlaceBreadboard)
         {
-            toastMsg.text = "Select the IR Sensor from the component panel";
+            toastMsg.text = "Select the Breadboard from the component panel";
         }
         else
         {
-            toastMsg.text = "Select the another component from the component panel";
+            toastMsg.text = "Select another component from the component panel";
         }
     }
 
@@ -328,14 +333,29 @@ public class Explore4 : MonoBehaviour
                 case ComponentType.IRSensor:
                     toastMsg.text = "Place the IR Sensor near the Arduino";
                     break;
+                case ComponentType.Breadboard:
+                    toastMsg.text = "Place the breadboard next to the Arduino and align the rails";
+                    break;
                 case ComponentType.Wire1:
-                    toastMsg.text = "Place Wire1 near the IR Sensor";
+                    toastMsg.text = "Place Wire1 to connect the IR sensor VCC to the breadboard";
                     break;
                 case ComponentType.Wire2:
-                    toastMsg.text = "Place Wire2 near the IR Sensor";
+                    toastMsg.text = "Place Wire2 to connect the IR sensor GND to the breadboard";
                     break;
                 case ComponentType.Wire3:
-                    toastMsg.text = "Place Wire3 near the IR Sensor";
+                    toastMsg.text = "Place Wire3 to connect sensor signal to Arduino pin";
+                    break;
+                case ComponentType.Wire4:
+                    toastMsg.text = "Place Wire4 to connect the LED anode to the breadboard";
+                    break;
+                case ComponentType.Wire5:
+                    toastMsg.text = "Place Wire5 to connect the LED cathode (via resistor) to Arduino GND";
+                    break;
+                case ComponentType.Led:
+                    toastMsg.text = "Place the LED on the breadboard and orient the legs correctly (long leg = anode)";
+                    break;
+                case ComponentType.Resistor:
+                    toastMsg.text = "Place the resistor between the LED cathode and ground rail to limit current";
                     break;
             }
         }
@@ -372,9 +392,9 @@ public class Explore4 : MonoBehaviour
     public bool isToastActive()
     {
         return _showToastCoroutine != null;
-	}
+    }
 
-	private IEnumerator ShowToast()
+    private IEnumerator ShowToast()
     {
         toast.SetActive(true);
         yield return new WaitForSeconds(toastDisplayDuration);

@@ -135,7 +135,7 @@ public class CodeEditor4 : MonoBehaviour
             return;
         }
 
-        // Validate pinMode: one must be 7,INPUT and one 13,OUTPUT (order does not matter)
+        // Validate pinMode: one must be 7,INPUT and one 9,OUTPUT (order does not matter)
         if (!IsValidIndex(pinModeStates, 0) || !IsValidIndex(pinModeStates, 1))
         {
             ShowToast("Error: pinMode configuration is missing.");
@@ -145,13 +145,13 @@ public class CodeEditor4 : MonoBehaviour
         PinMode pm0 = pinModeStates[0];
         PinMode pm1 = pinModeStates[1];
         bool pm0IsSensor = (pm0.pin == 7 && !pm0.high);  // 7, INPUT
-        bool pm0IsLed = (pm0.pin == 13 && pm0.high);     // 13, OUTPUT
+        bool pm0IsLed = (pm0.pin == 9 && pm0.high);     // 9, OUTPUT
         bool pm1IsSensor = (pm1.pin == 7 && !pm1.high);
-        bool pm1IsLed = (pm1.pin == 13 && pm1.high);
+        bool pm1IsLed = (pm1.pin == 9 && pm1.high);
 
         if (!((pm0IsSensor && pm1IsLed) || (pm0IsLed && pm1IsSensor)))
         {
-            ShowToast("One pinMode must be 7, INPUT and the other 13, OUTPUT. Please fix it.");
+            ShowToast("One pinMode must be 7, INPUT and the other 9, OUTPUT. Please fix it.");
             return;
         }
 
@@ -179,9 +179,9 @@ public class CodeEditor4 : MonoBehaviour
         }
 
         DigitalWrite dw0 = digitalWriteStates[0];
-        if (dw0.pin != 13)
+        if (dw0.pin != 9)
         {
-            ShowToast($"First digitalWrite pin should be 13, not {dw0.pin}. Please fix it.");
+            ShowToast($"First digitalWrite pin should be 9, not {dw0.pin}. Please fix it.");
             return;
         }
         if (!dw0.high)
@@ -190,7 +190,7 @@ public class CodeEditor4 : MonoBehaviour
             return;
         }
 
-        // Validate digitalWrite[1]: should be digitalWrite(13, LOW)
+        // Validate digitalWrite[1]: should be digitalWrite(9, LOW)
         if (!IsValidIndex(digitalWriteStates, 1))
         {
             ShowToast("Error: Second digitalWrite configuration is missing.");
@@ -198,9 +198,9 @@ public class CodeEditor4 : MonoBehaviour
         }
 
         DigitalWrite dw1 = digitalWriteStates[1];
-        if (dw1.pin != 13)
+        if (dw1.pin != 9)
         {
-            ShowToast($"Second digitalWrite pin should be 13, not {dw1.pin}. Please fix it.");
+            ShowToast($"Second digitalWrite pin should be 9, not {dw1.pin}. Please fix it.");
             return;
         }
         if (dw1.high)
