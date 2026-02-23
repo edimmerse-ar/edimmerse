@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: led_red
+  m_Name: led_led
   m_Shader: {fileID: 4800000, guid: 25298af6fba129244af9b913d66dee05, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0

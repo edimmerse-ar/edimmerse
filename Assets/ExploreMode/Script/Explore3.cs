@@ -11,11 +11,10 @@ public class Explore3 : MonoBehaviour
     
     private enum ComponentType
     {
-        Breadboard,
-        LED,
-        Resistor,
+        IRSensor,
         Wire1,
-        Wire2
+        Wire2,
+        Wire3
     }
 
     private enum ToastMessageType
@@ -72,7 +71,7 @@ public class Explore3 : MonoBehaviour
     // Private state
     private string[] toastMessages;
     private ToastMessageType activeToastMessage = ToastMessageType.ScanMarker;
-    private ComponentType currentComponentType = ComponentType.Breadboard;
+    private ComponentType currentComponentType = ComponentType.IRSensor;
     private bool isComponentPlaced = true;
     private Coroutine _showToastCoroutine;
     private int remainingComponents;
@@ -108,11 +107,12 @@ public class Explore3 : MonoBehaviour
     {
         toastMessages = new string[6];
         toastMessages[(int)ToastMessageType.ScanMarker] = "Scan the Marker to get started with Activity";
-        toastMessages[(int)ToastMessageType.PlaceBreadboard] = "Place the Breadboard near the Arduino";
-        toastMessages[(int)ToastMessageType.PlaceComponents] = "Place all the components on the Breadboard and connect them with the wires";
-        toastMessages[(int)ToastMessageType.NeedBreadboardFirst] = "You need to place breadboard near the Arduino";
-        toastMessages[(int)ToastMessageType.PlaceSelectedFirst] = "First you need to place selected component on the breadboard";
-        toastMessages[(int)ToastMessageType.Success] = "Good Job! You have connected the components successfully, Next start with coding.";
+        // Use PlaceBreadboard slot to indicate placing the IR Sensor in this scene
+        toastMessages[(int)ToastMessageType.PlaceBreadboard] = "Place the IR Sensor near the Arduino";
+        toastMessages[(int)ToastMessageType.PlaceComponents] = "Place all the components (IR Sensor and wires) and connect them as shown";
+        toastMessages[(int)ToastMessageType.NeedBreadboardFirst] = "You need to place the IR Sensor first";
+        toastMessages[(int)ToastMessageType.PlaceSelectedFirst] = "First you need to place selected component";
+        toastMessages[(int)ToastMessageType.Success] = "Good Job! You have connected the components successfully. Next start with coding.";
     }
 
     #endregion
@@ -169,14 +169,6 @@ public class Explore3 : MonoBehaviour
             return;
         }
 
-        // Check if Breadboard must be placed first
-        if (type != ComponentType.Breadboard && !IsBreadboardPlaced())
-        {
-            toastMsg.text = "You need to place the Breadboard first!";
-            RestartToastCoroutine();
-            return;
-        }
-
         if (!isComponentPlaced)
         {
             ShowPlacementWarning();
@@ -205,12 +197,6 @@ public class Explore3 : MonoBehaviour
         {
             componentPanel.SetActive(false);
         }
-    }
-
-    private bool IsBreadboardPlaced()
-    {
-        ComponentData breadboard = GetComponentData(ComponentType.Breadboard);
-        return breadboard != null && breadboard.isPlaced;
     }
 
     /// <summary>
@@ -319,7 +305,7 @@ public class Explore3 : MonoBehaviour
     {
         if (activeToastMessage == ToastMessageType.PlaceBreadboard)
         {
-            toastMsg.text = "Select the Breadboard from the component panel";
+            toastMsg.text = "Select the IR Sensor from the component panel";
         }
         else
         {
@@ -339,20 +325,17 @@ public class Explore3 : MonoBehaviour
             // Fallback messages based on component type
             switch (currentComponentType)
             {
-                case ComponentType.Breadboard:
-                    toastMsg.text = "Place the Breadboard near the Arduino";
-                    break;
-                case ComponentType.LED:
-                    toastMsg.text = "Place the LED near the Breadboard";
-                    break;
-                case ComponentType.Resistor:
-                    toastMsg.text = "Place the Resistor near the Breadboard";
+                case ComponentType.IRSensor:
+                    toastMsg.text = "Place the IR Sensor near the Arduino";
                     break;
                 case ComponentType.Wire1:
-                    toastMsg.text = "Place the Wire1 near the Breadboard";
+                    toastMsg.text = "Place Wire1 near the IR Sensor";
                     break;
                 case ComponentType.Wire2:
-                    toastMsg.text = "Place the Wire2 near the Breadboard";
+                    toastMsg.text = "Place Wire2 near the IR Sensor";
+                    break;
+                case ComponentType.Wire3:
+                    toastMsg.text = "Place Wire3 near the IR Sensor";
                     break;
             }
         }
@@ -386,7 +369,12 @@ public class Explore3 : MonoBehaviour
         _showToastCoroutine = StartCoroutine(ShowToast());
     }
 
-    private IEnumerator ShowToast()
+    public bool isToastActive()
+    {
+        return _showToastCoroutine != null;
+	}
+
+	private IEnumerator ShowToast()
     {
         toast.SetActive(true);
         yield return new WaitForSeconds(toastDisplayDuration);

@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-public class CodeEditor3 : MonoBehaviour
+public class CodeEditor4 : MonoBehaviour
 {
     [Header("Pin Mode Selector UI")]
     public GameObject pinModeSelector;
@@ -31,7 +31,7 @@ public class CodeEditor3 : MonoBehaviour
     public Toggle value1Toggle;
 
     [Header("Toast Reference")]
-    public Explore3 explore3;
+    public Explore4 explore4;
 
     [Header("State")]
     private int activeId = 0;
@@ -88,7 +88,7 @@ public class CodeEditor3 : MonoBehaviour
         if (RayFromTransformHitsBox(sensorTransform, obstacleBoxCollider, out RaycastHit hit, 10f))
         {
             sensorSignalLed.SetActive(true);
-            if (explore3.isToastActive()) return;
+            if (explore4.isToastActive()) return;
             ShowToast("Obstacle detected! The sensor reads HIGH.");
 		}
         else
@@ -129,7 +129,7 @@ public class CodeEditor3 : MonoBehaviour
     public void RunCode()
     {
         // Check if hardware setup is complete before allowing to run
-        if (explore3 != null && !explore3.IsHardwareSetupComplete())
+        if (explore4 != null && !explore4.IsHardwareSetupComplete())
         {
             ShowToast("Please complete the hardware connection first before running the program.");
             return;
@@ -223,9 +223,9 @@ public class CodeEditor3 : MonoBehaviour
 
     private void ShowToast(string message)
     {
-        if (explore3 != null)
+        if (explore4 != null)
         {
-            explore3.ShowToastMessage(message);
+            explore4.ShowToastMessage(message);
         }
         else
         {
