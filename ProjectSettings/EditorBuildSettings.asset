@@ -81,6 +81,6 @@ EditorBuildSettings:
     path: Assets/AIMLBot/Scenes/24_botMain.unity
     guid: 970e04598c7eca048a7071158d018d32
   - enabled: 1
-    path: Assets/Scenes/AR Sceans/Explore 6.unity
+    path: Assets/ExploreMode/Scenes/Explore 2.unity
     guid: fddb194919025dd49a470659197e766e
   m_configObjects: {}
