@@ -174,6 +174,38 @@ public class Explore4 : MonoBehaviour
             return;
         }
 
+        // Block wires until both IR Sensor and Breadboard are placed
+        if (IsWireType(type) && !AreSensorAndBreadboardPlaced())
+        {
+            // Build an appropriate message
+            bool sensorPlaced = GetComponentData(ComponentType.IRSensor)?.isPlaced ?? false;
+            bool breadboardPlaced = GetComponentData(ComponentType.Breadboard)?.isPlaced ?? false;
+
+            if (!sensorPlaced && !breadboardPlaced)
+            {
+                toastMsg.text = "Place the IR Sensor and Breadboard first before placing wires.";
+            }
+            else if (!sensorPlaced)
+            {
+                toastMsg.text = "Place the IR Sensor first before placing wires.";
+            }
+            else // breadboard missing
+            {
+                toastMsg.text = "Place the Breadboard first before placing wires.";
+            }
+
+            RestartToastCoroutine();
+            return;
+        }
+
+        // Block LED and Resistor until breadboard is placed
+        if ((type == ComponentType.Led || type == ComponentType.Resistor) && !IsBreadboardPlaced())
+        {
+            toastMsg.text = "Place the Breadboard first before placing the LED or resistor.";
+            RestartToastCoroutine();
+            return;
+        }
+
         if (!isComponentPlaced)
         {
             ShowPlacementWarning();
@@ -202,6 +234,26 @@ public class Explore4 : MonoBehaviour
         {
             componentPanel.SetActive(false);
         }
+    }
+
+    private bool IsWireType(ComponentType type)
+    {
+        return type == ComponentType.Wire1 || type == ComponentType.Wire2 || type == ComponentType.Wire3 || type == ComponentType.Wire4 || type == ComponentType.Wire5;
+    }
+
+    private bool AreSensorAndBreadboardPlaced()
+    {
+        var sensor = GetComponentData(ComponentType.IRSensor);
+        var bread = GetComponentData(ComponentType.Breadboard);
+        bool sensorPlaced = sensor != null && sensor.isPlaced;
+        bool breadPlaced = bread != null && bread.isPlaced;
+        return sensorPlaced && breadPlaced;
+    }
+
+    private bool IsBreadboardPlaced()
+    {
+        var bread = GetComponentData(ComponentType.Breadboard);
+        return bread != null && bread.isPlaced;
     }
 
     /// <summary>

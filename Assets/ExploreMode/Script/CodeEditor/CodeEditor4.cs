@@ -63,10 +63,12 @@ public class CodeEditor4 : MonoBehaviour
 
     public GameObject sensorPowerLed;
 	public GameObject sensorSignalLed;
+    public GameObject led;
 	public GameObject arduino13Led;
 
     public Transform sensorTransform;
     public BoxCollider obstacleBoxCollider;
+    public GameObject obstacle;
 
 	private enum EditMode
     {
@@ -88,12 +90,15 @@ public class CodeEditor4 : MonoBehaviour
         if (RayFromTransformHitsBox(sensorTransform, obstacleBoxCollider, out RaycastHit hit, 10f))
         {
             sensorSignalLed.SetActive(true);
-            if (explore4.isToastActive()) return;
+			led.SetActive(true);
+
+			if (explore4.isToastActive()) return;
             ShowToast("Obstacle detected! The sensor reads HIGH.");
 		}
         else
         {
             sensorSignalLed.SetActive(false);
+            led.SetActive(false);
 		}
 
 		if (!isProgramRunning) return;
@@ -209,12 +214,14 @@ public class CodeEditor4 : MonoBehaviour
             return;
         }
 
-        // All validations passed - code is correct!
-        ShowToast("Great job! Your code is correct. Running program...");
+		// All validations passed - code is correct!
+		ShowToast("Great job! Your code is correct. Program running, next you can move obstacle.");
 
 		arduino13Led.SetActive(true);
-        sensorPowerLed.SetActive(true);
+		sensorPowerLed.SetActive(true);
+		obstacle.SetActive(true);
 		lightMaterial.SetFloat("_Alpha", 0.5f);
+
 
 		isProgramRunning = true;
     }

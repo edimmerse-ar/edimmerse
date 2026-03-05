@@ -67,6 +67,7 @@ public class CodeEditor3 : MonoBehaviour
 
     public Transform sensorTransform;
     public BoxCollider obstacleBoxCollider;
+    public GameObject obstacle;
 
 	private enum EditMode
     {
@@ -210,10 +211,11 @@ public class CodeEditor3 : MonoBehaviour
         }
 
         // All validations passed - code is correct!
-        ShowToast("Great job! Your code is correct. Running program...");
+        ShowToast("Great job! Your code is correct. Program running, next you can move obstacle.");
 
 		arduino13Led.SetActive(true);
         sensorPowerLed.SetActive(true);
+		obstacle.SetActive(true);
 		lightMaterial.SetFloat("_Alpha", 0.5f);
 
 		isProgramRunning = true;
