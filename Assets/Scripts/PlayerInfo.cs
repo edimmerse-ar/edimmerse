@@ -8,7 +8,7 @@ public class PlayerInfo : MonoBehaviour
 	[SerializeField] private TMP_InputField ageInput;
 	[SerializeField] private TMP_InputField mailInput;
 
-	public ChangeScene changeScene;
+	public SceneHandler sceneHandler;
 
 	public void SaveInfo()
 	{
@@ -40,7 +40,7 @@ public class PlayerInfo : MonoBehaviour
 		GlobalVariables.PlayerAge = age;
 		GlobalVariables.PlayerMail = mail;
 
-		changeScene.GoToScene("ModeMenu");
+		sceneHandler.GoToScene("ModeMenu");
 	}
 
 	private bool IsValidEmail(string email)

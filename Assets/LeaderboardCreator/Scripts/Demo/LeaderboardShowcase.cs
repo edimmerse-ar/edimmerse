@@ -62,7 +62,7 @@ namespace Dan.Demo
             _pageInput.image.color = Color.white;
             _entriesToTakeInput.image.color = Color.white;
             
-            Leaderboards.Edmmerse.GetEntries(searchQuery, OnLeaderboardLoaded, ErrorCallback);
+            Leaderboards.EdImmerse.GetEntries(searchQuery, OnLeaderboardLoaded, ErrorCallback);
             ToggleLoadingPanel(true);
         }
 
@@ -154,12 +154,12 @@ namespace Dan.Demo
 
         public void Submit()
         {
-            Leaderboards.Edmmerse.UploadNewEntry(_playerUsernameInput.text, _playerScore, Callback, ErrorCallback);
+            Leaderboards.EdImmerse.UploadNewEntry(_playerUsernameInput.text, _playerScore, Callback, ErrorCallback);
         }
         
         public void DeleteEntry()
         {
-            Leaderboards.Edmmerse.DeleteEntry(Callback, ErrorCallback);
+            Leaderboards.EdImmerse.DeleteEntry(Callback, ErrorCallback);
         }
 
         public void ResetPlayer()
@@ -169,7 +169,7 @@ namespace Dan.Demo
 
         public void GetPersonalEntry()
         {
-            Leaderboards.Edmmerse.GetPersonalEntry(OnPersonalEntryLoaded, ErrorCallback);
+            Leaderboards.EdImmerse.GetPersonalEntry(OnPersonalEntryLoaded, ErrorCallback);
         }
 
         private void OnPersonalEntryLoaded(Entry entry)

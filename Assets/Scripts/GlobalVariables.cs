@@ -20,7 +20,7 @@ public class GlobalVariables : MonoBehaviour
 		if (GlobalVariables.sessionScore > GlobalVariables.score)
 		{
 			Debug.Log("update leaderboard score" + GlobalVariables.sessionScore);
-			Leaderboards.Edmmerse.UploadNewEntry(PlayerName, GlobalVariables.sessionScore, GlobalVariables.Callback, GlobalVariables.ErrorCallback);
+			Leaderboards.EdImmerse.UploadNewEntry(PlayerName, GlobalVariables.sessionScore, GlobalVariables.Callback, GlobalVariables.ErrorCallback);
 			GlobalVariables.score = GlobalVariables.sessionScore;
 		}
 	}
