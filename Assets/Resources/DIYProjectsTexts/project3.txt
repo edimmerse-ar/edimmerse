@@ -1,0 +1,13 @@
+<B>Scenario</B>
+Classrooms become hot and fans aren't always turned on promptly.
+
+Problem Statement: Design a system that automatically controls a fan based on room temperature.
+
+<B>Components:</B>
+    * Arduino Uno
+    * DHT11 Temperature & Humidity Sensor
+    * DC Motor to run a Fan
+    * Jumper Wires
+
+<B>How It Works:</B>
+The DHT11 sensor continuously monitors the temperature. If it crosses a preset threshold (e.g., 30°C), the Arduino turns on the fan. When it drops below the threshold, the fan is turned off.

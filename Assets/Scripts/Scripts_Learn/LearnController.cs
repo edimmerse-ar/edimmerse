@@ -50,14 +50,12 @@ public class LearnController : MonoBehaviour
 	private Dictionary<string, string> toastMessages;
 
 	public GameObject completePanel;
-	public GameObject robotHealth;
-	public GameObject buildProgress;
-	public GameObject categeryPanel;
 
 	public UpdateScore updateScore;
 
 	private List<Experiment> experiments = new List<Experiment>();
 
+	public GameObject scanningText;
 	void Start()
 	{
 		// Example: Fill all components
@@ -172,6 +170,8 @@ public class LearnController : MonoBehaviour
 
 	public void OnMarkerFound(string component)
 	{
+		scanningText.SetActive(false);
+
 		if (!components.Contains(component))
 		{
 			Debug.LogWarning("Unknown component: " + component);
@@ -210,6 +210,7 @@ public class LearnController : MonoBehaviour
 	{
 		HighlightCategory("");
 		targetImage.enabled =false;
+		scanningText.SetActive(true);
 	}
 
 	void CheckExperiments()

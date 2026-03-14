@@ -1,0 +1,21 @@
+<B>Scenario</B>
+An elderly person or someone with limited mobility often forgets to switch off
+the room lights during the day and finds it difficult to locate or reach the switch in the
+dark at night.
+
+<B>Problem Statement</B>
+ Design an Arduino-based system that automatically turns lights
+ON during the night and OFF during the day using a light-dependent sensor.
+
+<B>Components:</B>
+* Arduino Uno
+* LDR (Light Dependent Resistor) Sensor
+* LED or Bulb (as Load)
+* Jumper Wires, resistor, and Breadboard
+
+<B>How It Works:</B>
+The LDR sensor continuously monitors the ambient light level for a set threshold. For its
+lower values (indicating night), the Arduino switches ON the light. Whereas, for its
+higher values (during the day), the Arduino turns the light OFF to conserve energy. This
+automatic operation ensures comfort and safety, particularly for elderly individuals or
+those with limited mobility who may find it difficult to operate switches manually.

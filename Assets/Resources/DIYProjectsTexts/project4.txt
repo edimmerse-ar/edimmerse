@@ -1,0 +1,16 @@
+﻿<B>Scenario</B>
+Touching door handles can spread germs and is inconvenient when carrying items.
+Problem: Build a small door that opens automatically when someone approaches, with an LED to show when it’s opening.
+
+<B>Components:</B>
+    • Arduino Uno
+    • Ultrasonic Sensor
+    • Servo Motor
+    • LED (any color)
+    • Resistor (220 Ω for LED)
+    • Jumper Wires, Breadboard
+
+<B>How It Works:</B>
+    • The ultrasonic sensor keeps checking the distance.
+    • If a person is within about 30 cm, the LED turns on and the servo rotates to open the door.
+    • After a short delay, the servo returns to the closed position and the LED turns off.

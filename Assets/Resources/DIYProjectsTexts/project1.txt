@@ -1,0 +1,12 @@
+<B>Scenario</B>
+Lights are often left on in empty rooms, wasting electricity.
+Problem Statement: Create a system that turns the lights on when motion is detected and off when no one is present.
+
+<B>Components:</B>
+    * Arduino Uno
+    * PIR Motion Sensor
+    * LED/Bulb
+    * Jumper Wires, Breadboard
+
+<B>How It Works:</B>
+The PIR sensor detects motion in the room. When movement is detected, the Arduino turns on the light. After a few seconds of no motion, it automatically turns the light off.
