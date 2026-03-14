@@ -1,0 +1,24 @@
+using UnityEngine;
+using Dan.Main;
+using Dan.Models;
+
+public class LoadingScreen : MonoBehaviour
+{
+	public SceneHandler sceneHandler;
+
+	void Start()
+	{
+		Leaderboards.EdImmerse.GetPersonalEntry(OnPersonalEntryLoaded, ErrorCallback);
+	}
+	private void OnPersonalEntryLoaded(Entry entry)
+	{
+		GlobalVariables.score = entry.Score;
+		sceneHandler.GoToScene("MainMenu");
+	}
+
+	private void ErrorCallback(string error)
+	{
+		Debug.LogError(error);
+		sceneHandler.GoToScene("MainMenu");
+	}
+}
