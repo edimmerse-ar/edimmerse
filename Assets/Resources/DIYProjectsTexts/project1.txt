@@ -1,8 +1,10 @@
 <B>Scenario</B>
 Lights are often left on in empty rooms, wasting electricity.
-Problem Statement: Create a system that turns the lights on when motion is detected and off when no one is present.
 
-<B>Components:</B>
+<B>Problem Statement</B>
+Create a system that turns the lights on when motion is detected and off when no one is present.
+
+<B>Components:</B>
     * Arduino Uno
     * PIR Motion Sensor
     * LED/Bulb

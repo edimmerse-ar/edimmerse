@@ -1,6 +1,8 @@
 <B>Scenario</B>
 To avoid spreading germs, many places now prefer contactless systems like automatic hand sanitizers and touchless doorbells.
-Problem Statement: Create a touch-free doorbell using a single IR sensor that rings a buzzer when someone waves their hand near it.
+
+<B>Problem Statement</B>
+Create a touch-free doorbell using a single IR sensor that rings a buzzer when someone waves their hand near it.
 
 <B>Components:</B>
     * Arduino Uno

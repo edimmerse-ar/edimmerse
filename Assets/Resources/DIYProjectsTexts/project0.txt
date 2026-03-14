@@ -5,7 +5,7 @@ dark at night.
 
 <B>Problem Statement</B>
  Design an Arduino-based system that automatically turns lights
-ON during the night and OFF during the day using a light-dependent sensor.
+ ON during the night and OFF during the day using a light-dependent sensor.
 
 <B>Components:</B>
 * Arduino Uno

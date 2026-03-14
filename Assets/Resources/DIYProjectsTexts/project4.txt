@@ -1,6 +1,8 @@
 ﻿<B>Scenario</B>
 Touching door handles can spread germs and is inconvenient when carrying items.
-Problem: Build a small door that opens automatically when someone approaches, with an LED to show when it’s opening.
+
+<B>Problem Statement</B>
+Build a small door that opens automatically when someone approaches, with an LED to show when it’s opening.
 
 <B>Components:</B>
     • Arduino Uno
