@@ -33,7 +33,7 @@ public class MainAIMLScript : MonoBehaviour
         
         if (InputBox != null)
         {
-            InputBox.text = !string.IsNullOrEmpty(QuestionData.selectedQuestion) ? QuestionData.selectedQuestion : "";
+            InputBox.text = !string.IsNullOrEmpty(DIYProjectHandler.selectedQuestion) ? DIYProjectHandler.selectedQuestion : "";
         }
     }
 
@@ -97,7 +97,6 @@ public class MainAIMLScript : MonoBehaviour
             }
         }
     }
-
 
     void OnDisable()
     {

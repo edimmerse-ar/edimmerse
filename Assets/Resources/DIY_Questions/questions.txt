@@ -1,0 +1,34 @@
+Project: 0
+What is the purpose of the Smart Day-Night Light Controller?
+How does the LDR (Light Dependent Resistor) work when the surroundings become dark?
+How does the LDR (Light Dependent Resistor) behave when there is bright daylight?
+How can this system be improved?
+How should the components (LDR, LED etc.) be wired for this Smart Day-Night Light Controller?
+
+Project: 1
+Why do we need an automatic light controller?
+How does the PIR sensor work?
+Can this system be installed in multiple rooms?
+How can we improve the system further?
+How should the PIR motion sensor and LED be wired to the Arduino in the Automatic Room Light Controller project?
+
+Project: 2
+Why is a touchless doorbell important?
+How does the IR sensor detect a hand wave?
+Can the distance (threshold) be adjusted?
+How can this system be made more advanced?
+How should the IR sensor, buzzer, and LED be wired to the Arduino in the Touchless Doorbell System?
+
+Project: 3
+Why do we use a temperature-controlled fan?
+What does the DHT11 sensor do?
+What happens if the room temperature goes above the set level?
+How can this system be improved?
+How should the DHT11 sensor and DC motor (fan) be wired to the Arduino in the Temperature-Based Fan Controller project?
+
+Project: 4
+Why is a contactless doorway useful?
+How does the ultrasonic sensor detect people?
+What happens when someone approaches the door?
+Does the door close automatically?
+How should the ultrasonic sensor, servo motor, and LED be wired to the Arduino in the Contactless Doorway project?

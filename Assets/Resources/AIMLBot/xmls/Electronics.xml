@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <aiml>
   <!-- Free software (c) 2001-2003 ALICE A.I. Foundation.   -->
   <!-- This program is open source code released under -->
@@ -114,8 +114,12 @@
 
 <!-- SMART DAY-NIGHT LIGHT CONTROLLER -->
 <category>
+  <pattern>WHAT IS THE PURPOSE OF THE SMART DAY NIGHT LIGHT CONTROLLER</pattern>
+  <template>The Smart Day-Night Light Controller automatically turns lights ON when it gets dark (using an LDR) and OFF in daylight, to save energy and provide hands-free lighting.</template>
+</category>
+<category>
   <pattern>WHAT IS THE PURPOSE OF THE SMART DAY-NIGHT LIGHT CONTROLLER</pattern>
-  <template>It automatically turns lights ON at night and OFF during the day to save energy.</template>
+  <template>The Smart Day-Night Light Controller automatically turns lights ON when it gets dark (using an LDR) and OFF in daylight, to save energy and provide hands-free lighting.</template>
 </category>
 
 <category>
