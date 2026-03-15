@@ -21,8 +21,10 @@ public class MainAIMLScript : MonoBehaviour
     public InputField InputBox;
     public InputField OutputBox;
 
-    // Use this for initialization
-    void Start()
+    public UpdateScore updateScore;
+
+	// Use this for initialization
+	void Start()
     {
         bot = new ChatbotMobileWeb();
         LoadFilesFromConfigFolder();
@@ -43,8 +45,8 @@ public class MainAIMLScript : MonoBehaviour
     /// </summary>
     public void SendQuestionToRobot()
     {
-        GlobalVariables.updateScore(2);
-        StartCoroutine("SendQuesToBot");
+		updateScore.Submit(2);
+		StartCoroutine("SendQuesToBot");
     }
 
     IEnumerator SendQuesToBot()

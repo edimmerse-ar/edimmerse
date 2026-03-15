@@ -81,11 +81,13 @@ public class Explore4 : MonoBehaviour
     private Coroutine _showToastCoroutine;
     private int remainingComponents;
 
-    #endregion
+	[Header("Score")]
+	public UpdateScore updateScore;
+	#endregion
 
-    #region Unity Lifecycle
+	#region Unity Lifecycle
 
-    void Start()
+	void Start()
     {
         InitializeToastMessages();
         remainingComponents = components.Count;
@@ -303,7 +305,10 @@ public class Explore4 : MonoBehaviour
         data.isPlaced = true;
 
         // Activate component and clean up blink/drag objects
-        if (data.component != null) data.component.SetActive(true);
+        if (data.component != null) {
+			updateScore.Submit(2);
+			data.component.SetActive(true); 
+        }
         
         if (data.blink != null)
         {
@@ -344,7 +349,8 @@ public class Explore4 : MonoBehaviour
         // If all components are placed, show coding message
         if (AreAllComponentsPlaced())
         {
-            toastMsg.text = "Next you can start with coding.";
+			updateScore.Submit(10);
+			toastMsg.text = "Next you can start with coding.";
             return;
         }
 

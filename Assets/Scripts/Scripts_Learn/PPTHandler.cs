@@ -15,6 +15,8 @@ public class PPTHandler : MonoBehaviour
 	public Button preBtn;
 	public Button nextBtn;
 
+	public UpdateScore updateScore;
+	private bool scoreUpdate = false; 
 	void Start()
 	{
 		// Load the first slide
@@ -66,8 +68,8 @@ public class PPTHandler : MonoBehaviour
 		if (currentIndex == totalSlides)
 		{
 			nextBtn.interactable = (false);
-
-			GlobalVariables.updateScore(10);
+			if(!scoreUpdate) updateScore.Submit(5);
+			scoreUpdate = true;
 		}
 		else
 		{

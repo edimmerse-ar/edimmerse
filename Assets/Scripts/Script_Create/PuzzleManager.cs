@@ -18,7 +18,9 @@ public class PuzzleManager : MonoBehaviour
     private ParticleSystem confetti1PS;
     private ParticleSystem confetti2PS;
 
-    void Start()
+    public UpdateScore updateScore;
+
+	void Start()
     {
         // Ensure confetti objects are deactivated at start
         if (confetti1 != null)
@@ -47,9 +49,6 @@ public class PuzzleManager : MonoBehaviour
     {
         // Show Correct Panel
         correctPanel.SetActive(true);
-
-        // Add Score
-        GameManager.instance.AddScore(5);
 
         // Play Applause SFX
         if (correctSound != null && PlayerPrefs.GetInt("MusicEnabled")==1)
@@ -95,10 +94,11 @@ public class PuzzleManager : MonoBehaviour
 
         // Move to Next Puzzle
         currentPuzzle.SetActive(false);
-        int currentCoin = PlayerPrefs.GetInt("coinData", 0);
-        currentCoin=currentCoin+5;
-        PlayerPrefs.SetInt("coinData", currentCoin);
+
         if (nextPuzzle != null)
             nextPuzzle.SetActive(true);
-    }
+
+		updateScore.Submit(5);
+
+	}
 }

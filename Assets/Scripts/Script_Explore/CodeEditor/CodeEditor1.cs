@@ -4,8 +4,6 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-
-
 public class CodeEditor1 : MonoBehaviour
 {
     [Header("Pin Mode Selector UI")]
@@ -50,7 +48,10 @@ public class CodeEditor1 : MonoBehaviour
     [SerializeField] private float maxLightIntensity = 3f;
     
     private Coroutine blinkCoroutine;
-    
+
+	[Header("Score")]
+	public UpdateScore updateScore;
+	
     private enum EditMode
     {
         None,
@@ -85,6 +86,7 @@ public class CodeEditor1 : MonoBehaviour
         // Check if hardware setup is complete before allowing to run
         if (explore1 != null && !explore1.IsHardwareSetupComplete())
         {
+            updateScore.Submit(-1);
             ShowToast("Please complete the hardware connection first before running the program.");
             return;
         }
@@ -92,62 +94,72 @@ public class CodeEditor1 : MonoBehaviour
         // Validate pinMode[0]: should be pinMode(13, OUTPUT)
         if (!IsValidIndex(pinModeStates, 0))
         {
-            ShowToast("Error: pinMode configuration is missing.");
+			updateScore.Submit(-1);
+			ShowToast("Error: pinMode configuration is missing.");
             return;
         }
 
         PinMode pm0 = pinModeStates[0];
         if (pm0.pin != 13)
         {
-            ShowToast($"pinMode pin should be 13, not {pm0.pin}. Please fix it.");
+			updateScore.Submit(-1);
+			ShowToast($"pinMode pin should be 13, not {pm0.pin}. Please fix it.");
             return;
         }
         if (!pm0.high) // high = true means OUTPUT
         {
-            ShowToast("pinMode mode should be OUTPUT, not INPUT. Please fix it.");
+			updateScore.Submit(-1);
+			ShowToast("pinMode mode should be OUTPUT, not INPUT. Please fix it.");
             return;
         }
 
         // Validate digitalWrite[0]: should be digitalWrite(13, HIGH)
         if (!IsValidIndex(digitalWriteStates, 0))
         {
-            ShowToast("Error: First digitalWrite configuration is missing.");
+			updateScore.Submit(-1);
+			ShowToast("Error: First digitalWrite configuration is missing.");
             return;
         }
 
         DigitalWrite dw0 = digitalWriteStates[0];
         if (dw0.pin != 13)
         {
-            ShowToast($"First digitalWrite pin should be 13, not {dw0.pin}. Please fix it.");
+			updateScore.Submit(-1);
+			ShowToast($"First digitalWrite pin should be 13, not {dw0.pin}. Please fix it.");
             return;
         }
         if (!dw0.high)
         {
-            ShowToast("First digitalWrite should be HIGH, not LOW. Please fix it.");
+			updateScore.Submit(-1);
+			ShowToast("First digitalWrite should be HIGH, not LOW. Please fix it.");
             return;
         }
 
         // Validate digitalWrite[1]: should be digitalWrite(13, LOW)
         if (!IsValidIndex(digitalWriteStates, 1))
         {
-            ShowToast("Error: Second digitalWrite configuration is missing.");
+			updateScore.Submit(-1);
+			ShowToast("Error: Second digitalWrite configuration is missing.");
             return;
         }
 
         DigitalWrite dw1 = digitalWriteStates[1];
         if (dw1.pin != 13)
         {
-            ShowToast($"Second digitalWrite pin should be 13, not {dw1.pin}. Please fix it.");
+			updateScore.Submit(-1);
+			ShowToast($"Second digitalWrite pin should be 13, not {dw1.pin}. Please fix it.");
             return;
         }
         if (dw1.high)
         {
-            ShowToast("Second digitalWrite should be LOW, not HIGH. Please fix it.");
+			updateScore.Submit(-1);
+			ShowToast("Second digitalWrite should be LOW, not HIGH. Please fix it.");
             return;
         }
 
-        // All validations passed - code is correct!
-        ShowToast("Great job! Your code is correct. Running program...");
+		updateScore.Submit(10);
+		// All validations passed - code is correct!
+		ShowToast("Great job! Your code is correct. Running program...");
         
         // Start blinking with current delay values
         StartBlinking();

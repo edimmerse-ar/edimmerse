@@ -17,7 +17,7 @@ public class GlobalVariables : MonoBehaviour
 		Debug.Log("sessionScore" + sessionScore);
 		Debug.Log("scoreAug" + scoreAug);
 		Debug.Log("score" + GlobalVariables.score);
-		if (GlobalVariables.sessionScore > GlobalVariables.score)
+		if (GlobalVariables.sessionScore > GlobalVariables.score && GlobalVariables.sessionScore >=0)
 		{
 			Debug.Log("update leaderboard score" + GlobalVariables.sessionScore);
 			Leaderboards.EdImmerse.UploadNewEntry(PlayerName, GlobalVariables.sessionScore, GlobalVariables.Callback, GlobalVariables.ErrorCallback);

@@ -44,7 +44,9 @@ public class QuizManager3 : MonoBehaviour
     private float totalTime = 60f;
     private float remainingTime;
 
-    void Start()
+    public UpdateScore updateScore;
+
+	void Start()
     {
         remainingTime = totalTime;
         UpdateScoreUI();
@@ -200,11 +202,10 @@ public class QuizManager3 : MonoBehaviour
     void EndQuiz()
     {
         FinalText.text = "Total Score : "+score;
-        int currentCoin = PlayerPrefs.GetInt("coinData", 0);
-        currentCoin=currentCoin+10;
-        PlayerPrefs.SetInt("coinData", currentCoin);
 
-        questionImage.enabled = false;
+        updateScore.Submit(score);
+
+		questionImage.enabled = false;
 
         foreach (Button btn in optionButtons)
         {

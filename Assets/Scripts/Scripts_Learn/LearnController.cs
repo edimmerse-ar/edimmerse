@@ -56,6 +56,7 @@ public class LearnController : MonoBehaviour
 	private List<Experiment> experiments = new List<Experiment>();
 
 	public GameObject scanningText;
+
 	void Start()
 	{
 		// Example: Fill all components
@@ -268,12 +269,12 @@ public class LearnController : MonoBehaviour
 	{
 		toast.SetActive(true);
 
-		if (percent > 99)
+		if (percent > 95)
 		{
 			yield return new WaitForSeconds(1f);
 			toast.SetActive(false);
 			completePanel.SetActive(true);
-			GlobalVariables.updateScore(10);
+			updateScoreInLeaderboard();
 		}
 
 		yield return new WaitForSeconds(5f);
@@ -292,5 +293,12 @@ public class LearnController : MonoBehaviour
 		{
 			Debug.LogWarning("❌ Image not found for: " + componentName);
 		}
+	}
+
+	public void updateScoreInLeaderboard()
+	{
+        // percent is an int (0-100). Calculate score as percent/10 with proper rounding
+        int score = Mathf.RoundToInt(percent / 10f);
+		updateScore.Submit(score);
 	}
 }

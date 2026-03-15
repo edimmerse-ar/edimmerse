@@ -9,7 +9,20 @@ public class ProfileHandler : MonoBehaviour
 
 	private void Start()
 	{
-		uiImage.sprite = Profile[GlobalVariables.character];
+		// Load saved character selection from PlayerPrefs in case the static value was reset
+		int savedCharacter = PlayerPrefs.GetInt("character", GlobalVariables.character);
+		GlobalVariables.character = savedCharacter;
+		Debug.Log("Character: " + GlobalVariables.character);
+
+		if (Profile != null && Profile.Length > GlobalVariables.character && uiImage != null)
+		{
+			uiImage.sprite = Profile[GlobalVariables.character];
+		}
+		else
+		{
+			Debug.LogWarning($"ProfileHandler: profile sprite for index {GlobalVariables.character} not found.");
+		}
+
 		int Coins = GlobalVariables.score;
 		scoreText.text = Coins.ToString();
 	}

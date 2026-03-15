@@ -72,7 +72,7 @@ public class ScoreGen : MonoBehaviour
         {
             ScoreD = TotalScore - TotalError;
         }
-		GlobalVariables.updateScore(ScoreD);
+		//GlobalVariables.updateScore(ScoreD);
 		ScoreText.text = ScoreD.ToString();
         ErrorText.text = TotalError.ToString();
         if (ScoreD < flimit && ScoreD != 0)

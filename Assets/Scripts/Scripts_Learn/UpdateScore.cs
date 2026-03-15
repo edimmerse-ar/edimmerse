@@ -1,12 +1,13 @@
-using Dan.Main;
-using System.Collections;
-using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
     public class UpdateScore : MonoBehaviour
     {
-        // Start is called before the first frame update
-        void Start()
+	public Animation scoreAnimation;
+    public TextMeshProUGUI scoreText;
+
+		// Start is called before the first frame update
+		void Start()
         {
         
         }
@@ -14,6 +15,9 @@ using UnityEngine;
         // Update is called once per frame
         public void Submit(int score)
         {
-			GlobalVariables.updateScore(score);
+		scoreText.enabled = true;
+		scoreAnimation.Play();
+            scoreText.text = "SCORE: +" + score.ToString();
+		    GlobalVariables.updateScore(score);
 		}
 	}

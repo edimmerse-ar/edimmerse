@@ -19,7 +19,7 @@ namespace Dan.Demo
             dateTime = dateTime.AddSeconds(entry.Date);
             _timeText.text = $"{dateTime.Hour:00}:{dateTime.Minute:00}:{dateTime.Second:00} (UTC)\n{dateTime:dd/MM/yyyy}";
             
-            GetComponent<Image>().color = entry.IsMine() ? Color.yellow : Color.white;
+            GetComponent<Image>().color = entry.IsMine() ? Color.yellow : new Color(0.1f,0.1f,0.1f);
         }
     }
 }

@@ -70,6 +70,9 @@ public class CodeEditor4 : MonoBehaviour
     public BoxCollider obstacleBoxCollider;
     public GameObject obstacle;
 
+	[Header("Score")]
+	public UpdateScore updateScore;
+
 	private enum EditMode
     {
         None,
@@ -136,14 +139,16 @@ public class CodeEditor4 : MonoBehaviour
         // Check if hardware setup is complete before allowing to run
         if (explore4 != null && !explore4.IsHardwareSetupComplete())
         {
-            ShowToast("Please complete the hardware connection first before running the program.");
+			updateScore.Submit(-1);
+			ShowToast("Please complete the hardware connection first before running the program.");
             return;
         }
 
         // Validate pinMode: one must be 7,INPUT and one 9,OUTPUT (order does not matter)
         if (!IsValidIndex(pinModeStates, 0) || !IsValidIndex(pinModeStates, 1))
         {
-            ShowToast("Error: pinMode configuration is missing.");
+			updateScore.Submit(-1);
+			ShowToast("Error: pinMode configuration is missing.");
             return;
         }
 
@@ -156,64 +161,75 @@ public class CodeEditor4 : MonoBehaviour
 
         if (!((pm0IsSensor && pm1IsLed) || (pm0IsLed && pm1IsSensor)))
         {
-            ShowToast("One pinMode must be 7, INPUT and the other 9, OUTPUT. Please fix it.");
+			updateScore.Submit(-1);
+			ShowToast("One pinMode must be 7, INPUT and the other 9, OUTPUT. Please fix it.");
             return;
         }
 
         if (digitalReadState == null || digitalReadState.pin != 7)
         {
-            ShowToast($"digitalRead pin should be 7, not {(digitalReadState?.pin ?? -1)}. Please fix it.");
+			updateScore.Submit(-1);
+			ShowToast($"digitalRead pin should be 7, not {(digitalReadState?.pin ?? -1)}. Please fix it.");
             return;
         }
 
         if (!IsValidIndex(conditionStates, 0) || conditionStates[0].compareValue != 1)
         {
-            ShowToast("First condition should be if (sensor == 1). Please fix it.");
+			updateScore.Submit(-1);
+			ShowToast("First condition should be if (sensor == 1). Please fix it.");
             return;
         }
         if (!IsValidIndex(conditionStates, 1) || conditionStates[1].compareValue != 0)
         {
-            ShowToast("Second condition should be if (sensor == 0). Please fix it.");
+			updateScore.Submit(-1);
+			ShowToast("Second condition should be if (sensor == 0). Please fix it.");
             return;
         }
 
         if (!IsValidIndex(digitalWriteStates, 0))
         {
-            ShowToast("Error: First digitalWrite configuration is missing.");
+			updateScore.Submit(-1);
+			ShowToast("Error: First digitalWrite configuration is missing.");
             return;
         }
 
         DigitalWrite dw0 = digitalWriteStates[0];
         if (dw0.pin != 9)
         {
-            ShowToast($"First digitalWrite pin should be 9, not {dw0.pin}. Please fix it.");
+			updateScore.Submit(-1);
+			ShowToast($"First digitalWrite pin should be 9, not {dw0.pin}. Please fix it.");
             return;
         }
         if (!dw0.high)
         {
-            ShowToast("First digitalWrite should be HIGH, not LOW. Please fix it.");
+			updateScore.Submit(-1);
+			ShowToast("First digitalWrite should be HIGH, not LOW. Please fix it.");
             return;
         }
 
         // Validate digitalWrite[1]: should be digitalWrite(9, LOW)
         if (!IsValidIndex(digitalWriteStates, 1))
         {
-            ShowToast("Error: Second digitalWrite configuration is missing.");
+			updateScore.Submit(-1);
+			ShowToast("Error: Second digitalWrite configuration is missing.");
             return;
         }
 
         DigitalWrite dw1 = digitalWriteStates[1];
         if (dw1.pin != 9)
         {
-            ShowToast($"Second digitalWrite pin should be 9, not {dw1.pin}. Please fix it.");
+			updateScore.Submit(-1);
+			ShowToast($"Second digitalWrite pin should be 9, not {dw1.pin}. Please fix it.");
             return;
         }
         if (dw1.high)
         {
-            ShowToast("Second digitalWrite should be LOW, not HIGH. Please fix it.");
+			updateScore.Submit(-1);
+			ShowToast("Second digitalWrite should be LOW, not HIGH. Please fix it.");
             return;
         }
 
+		updateScore.Submit(10);
 		// All validations passed - code is correct!
 		ShowToast("Great job! Your code is correct. Program running, next you can move obstacle.");
 
