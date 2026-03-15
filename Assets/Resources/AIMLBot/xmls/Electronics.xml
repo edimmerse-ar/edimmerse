@@ -123,20 +123,92 @@
 </category>
 
 <category>
+  <pattern>HOW DOES THE LDR * WORK WHEN THE SURROUNDINGS BECOME DARK</pattern>
+  <template>The LDR (Light Dependent Resistor) detects low light, and the Arduino turns the LED or lamp ON.</template>
+</category>
+<category>
   <pattern>HOW LDR WORKS WHEN SURROUNDINGS BECOME DARK</pattern>
   <template>The LDR (Light Dependent Resistor) detects low light, and the Arduino turns the LED or lamp ON.</template>
 </category>
 
+<category>
+  <pattern>HOW DOES THE LDR * BEHAVE WHEN THERE IS BRIGHT DAYLIGHT</pattern>
+  <template>The LDR senses high light, and the Arduino switches the LED or lamp OFF.</template>
+</category>
 <category>
   <pattern>HOW LDR WORKS WHEN THERE IS BRIGHT DAYLIGHT</pattern>
   <template>The LDR senses high light, and the Arduino switches the LED or lamp OFF.</template>
 </category>
 
 <category>
+  <pattern>HOW CAN THIS SYSTEM BE IMPROVED</pattern>
+  <template>By adding IoT control, better sensors, or automation features. For the Day-Night Light: brightness adjustment or a real-time clock. For the Temperature Fan: multiple fans, speed control, or IoT monitoring.</template>
+</category>
+<category>
   <pattern>HOW CAN THIS SYSTEM BE IMPROVED SMART LIGHT</pattern>
   <template>By adding IoT control, brightness adjustment, or a real-time clock for scheduling.</template>
 </category>
 
+<category>
+  <pattern>HOW SHOULD THE COMPONENTS LDR LED ETC</pattern>
+  <template>
+    <b>Wiring Connections for Smart Day-Night Light Controller:</b>
+    <ul>
+      <li>LDR one end → Arduino 5V</li>
+      <li>LDR other end → Arduino A0 (and 10kΩ resistor to GND)</li>
+      <li>LED anode → Arduino D7 (through 220Ω resistor)</li>
+      <li>LED cathode → Arduino GND</li>
+    </ul>
+    <br/>
+    <b>Note:</b>
+    The LDR and 10kΩ resistor form a voltage divider circuit that lets the Arduino sense changing light levels.
+  </template>
+</category>
+<category>
+  <pattern>BE WIRED FOR THIS SMART DAY NIGHT LIGHT CONTROLLER</pattern>
+  <template>
+    <b>Wiring Connections for Smart Day-Night Light Controller:</b>
+    <ul>
+      <li>LDR one end → Arduino 5V</li>
+      <li>LDR other end → Arduino A0 (and 10kΩ resistor to GND)</li>
+      <li>LED anode → Arduino D7 (through 220Ω resistor)</li>
+      <li>LED cathode → Arduino GND</li>
+    </ul>
+    <br/>
+    <b>Note:</b>
+    The LDR and 10kΩ resistor form a voltage divider circuit that lets the Arduino sense changing light levels.
+  </template>
+</category>
+<category>
+  <pattern>BE WIRED FOR THIS SMART DAY-NIGHT LIGHT CONTROLLER</pattern>
+  <template>
+    <b>Wiring Connections for Smart Day-Night Light Controller:</b>
+    <ul>
+      <li>LDR one end → Arduino 5V</li>
+      <li>LDR other end → Arduino A0 (and 10kΩ resistor to GND)</li>
+      <li>LED anode → Arduino D7 (through 220Ω resistor)</li>
+      <li>LED cathode → Arduino GND</li>
+    </ul>
+    <br/>
+    <b>Note:</b>
+    The LDR and 10kΩ resistor form a voltage divider circuit that lets the Arduino sense changing light levels.
+  </template>
+</category>
+<category>
+  <pattern>HOW SHOULD THE COMPONENTS * BE WIRED FOR THIS SMART DAY NIGHT LIGHT CONTROLLER</pattern>
+  <template>
+    <b>Wiring Connections:</b>
+    <ul>
+      <li>LDR one end → Arduino 5V</li>
+      <li>LDR other end → Arduino A0 (and 10kΩ resistor to GND)</li>
+      <li>LED anode → Arduino D7 (through 220Ω resistor)</li>
+      <li>LED cathode → Arduino GND</li>
+    </ul>
+    <br/>
+    <b>Note:</b>
+    The LDR and 10kΩ resistor form a voltage divider circuit that lets the Arduino sense changing light levels.
+  </template>
+</category>
 <category>
   <pattern>HOW SHOULD THE COMPONENTS BE WIRED FOR SMART DAY NIGHT LIGHT CONTROLLER</pattern>
   <template>
@@ -175,6 +247,19 @@
 </category>
 
 <category>
+  <pattern>HOW SHOULD THE PIR MOTION SENSOR AND LED BE WIRED TO THE ARDUINO IN THE AUTOMATIC ROOM LIGHT CONTROLLER PROJECT</pattern>
+  <template>
+    <b>Wiring Connections:</b>
+    <ul>
+      <li>PIR VCC → Arduino 5V</li>
+      <li>PIR GND → Arduino GND</li>
+      <li>PIR OUT → Arduino D2</li>
+      <li>LED anode → Arduino D7 (through resistor)</li>
+      <li>LED cathode → Arduino GND</li>
+    </ul>
+  </template>
+</category>
+<category>
   <pattern>HOW SHOULD THE PIR SENSOR AND LED BE WIRED IN AUTOMATIC ROOM LIGHT CONTROLLER</pattern>
   <template>
     <b>Wiring Connections:</b>
@@ -200,6 +285,10 @@
 </category>
 
 <category>
+  <pattern>CAN THE DISTANCE THRESHOLD BE ADJUSTED</pattern>
+  <template>Yes, the sensing range (5 to 10 cm) can be set in the Arduino code.</template>
+</category>
+<category>
   <pattern>CAN THE DISTANCE BE ADJUSTED</pattern>
   <template>Yes, the sensing range (5 to 10 cm) can be set in the Arduino code.</template>
 </category>
@@ -209,6 +298,20 @@
   <template>By connecting it to a smart home system or adding a camera for visitor identification.</template>
 </category>
 
+<category>
+  <pattern>HOW SHOULD THE IR SENSOR BUZZER AND LED BE WIRED TO THE ARDUINO IN THE TOUCHLESS DOORBELL SYSTEM</pattern>
+  <template>
+    <b>Wiring Connections:</b>
+    <ul>
+      <li>IR Sensor VCC → Arduino 5V</li>
+      <li>IR Sensor GND → Arduino GND</li>
+      <li>IR Sensor OUT → Arduino D3</li>
+      <li>Buzzer + → Arduino D8</li>
+      <li>Buzzer - → Arduino GND</li>
+      <li>(Optional) LED anode → Arduino D7 (through 220Ω resistor) and LED cathode → Arduino GND</li>
+    </ul>
+  </template>
+</category>
 <category>
   <pattern>HOW SHOULD THE IR SENSOR BUZZER AND LED BE WIRED IN TOUCHLESS DOORBELL SYSTEM</pattern>
   <template>
@@ -225,6 +328,14 @@
 </category>
 
 <!-- TEMPERATURE CONTROLLED FAN -->
+<category>
+  <pattern>WHY DO WE USE A TEMPERATURE CONTROLLED FAN</pattern>
+  <template>It provides comfort and saves energy by running only when needed as per the temperature conditions.</template>
+</category>
+<category>
+  <pattern>WHY DO WE USE A TEMPERATURE-CONTROLLED FAN</pattern>
+  <template>It provides comfort and saves energy by running only when needed as per the temperature conditions.</template>
+</category>
 <category>
   <pattern>WHY WE USE A TEMPERATURE CONTROLLED FAN</pattern>
   <template>It provides comfort and saves energy by running only when needed as per the temperature conditions.</template>
@@ -245,6 +356,23 @@
   <template>By adding multiple fans, speed control, or IoT for remote monitoring.</template>
 </category>
 
+<category>
+  <pattern>HOW SHOULD THE DHT11 SENSOR AND DC MOTOR * BE WIRED TO THE ARDUINO IN THE TEMPERATURE BASED FAN CONTROLLER PROJECT</pattern>
+  <template>
+    <b>Wiring Connections:</b>
+    <ul>
+      <li>DHT11 VCC → Arduino 5V</li>
+      <li>DHT11 GND → Arduino GND</li>
+      <li>DHT11 DATA → Arduino D4</li>
+      <li>Motor + → Arduino D5</li>
+      <li>Motor - → Arduino GND</li>
+      <li>(Optional) Diode across motor: Cathode → Motor +, Anode → Motor -</li>
+    </ul>
+    <br/>
+    <b>Note:</b>
+    Use a small 5V toy motor only. For higher current motors, a transistor or motor driver (L298N) is required.
+  </template>
+</category>
 <category>
   <pattern>HOW SHOULD THE DHT11 SENSOR AND DC MOTOR BE WIRED IN TEMPERATURE BASED FAN CONTROLLER</pattern>
   <template>
@@ -284,6 +412,26 @@
   <template>Yes, after a short delay, the servo rotates back to close the door.</template>
 </category>
 
+<category>
+  <pattern>HOW SHOULD THE ULTRASONIC SENSOR SERVO MOTOR AND LED BE WIRED TO THE ARDUINO IN THE CONTACTLESS DOORWAY PROJECT</pattern>
+  <template>
+    <b>Wiring Connections:</b>
+    <ul>
+      <li>Sensor VCC → Arduino 5V</li>
+      <li>Sensor GND → Arduino GND</li>
+      <li>Sensor TRIG → Arduino D9</li>
+      <li>Sensor ECHO → Arduino D10</li>
+      <li>Servo VCC (red) → Arduino 5V</li>
+      <li>Servo GND (brown) → Arduino GND</li>
+      <li>Servo Signal (orange) → Arduino D6</li>
+      <li>LED anode → Arduino D7</li>
+      <li>LED cathode → Arduino GND</li>
+    </ul>
+    <br/>
+    <b>Note:</b>
+    If the servo draws more power, use an external 5V supply and connect its ground to Arduino GND.
+  </template>
+</category>
 <category>
   <pattern>HOW SHOULD THE ULTRASONIC SENSOR SERVO MOTOR AND LED BE WIRED IN CONTACTLESS DOORWAY</pattern>
   <template>
