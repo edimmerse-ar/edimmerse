@@ -157,7 +157,7 @@ public class QuizManager3 : MonoBehaviour
     {
         correctPanel.SetActive(true);
 
-        if (correctAudioSource != null)
+        if (correctAudioSource != null && PlayerPrefs.GetInt("MusicEnabled") == 1)
             correctAudioSource.Play();
 
         if (confetti1 != null)

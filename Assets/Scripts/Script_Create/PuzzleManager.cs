@@ -52,7 +52,7 @@ public class PuzzleManager : MonoBehaviour
         GameManager.instance.AddScore(5);
 
         // Play Applause SFX
-        if (correctSound != null)
+        if (correctSound != null && PlayerPrefs.GetInt("MusicEnabled")==1)
         {
             correctSound.Play();
         }
