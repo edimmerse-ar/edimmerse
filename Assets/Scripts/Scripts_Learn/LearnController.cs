@@ -282,7 +282,7 @@ public class LearnController : MonoBehaviour
 
 	public void LoadImage(string componentName)
 	{
-		Sprite sprite = Resources.Load<Sprite>("LearnComponents/" + componentName);
+		Sprite sprite = Resources.Load<Sprite>("Learn_Components/" + componentName);
 		if (sprite != null)
 		{
 			targetImage.sprite = sprite;

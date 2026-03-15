@@ -26,7 +26,7 @@ public class PPTHandler : MonoBehaviour
 		if (currentIndex < 0 || currentIndex > totalSlides) return;
 
 		string slideName = baseName + index;
-		Sprite sprite = Resources.Load<Sprite>("Slides/" + slideName);
+		Sprite sprite = Resources.Load<Sprite>("Learn_PPT/" + slideName);
 
 		if (sprite != null)
 		{

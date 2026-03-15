@@ -6,14 +6,11 @@ using System.Collections.Generic;
 
 using UnityEngine.UI;
 /*
-
     Import AIML files within the Resources
-
 */
 
 public class MainAIMLScript : MonoBehaviour
 {
-
     private TextAsset[] aimlFiles;
     private List<string> aimlXmlDocumentListFileName = new List<string>();
     private List<XmlDocument> aimlXmlDocumentList = new List<XmlDocument>();
@@ -38,14 +35,6 @@ public class MainAIMLScript : MonoBehaviour
         {
             InputBox.text = !string.IsNullOrEmpty(QuestionData.selectedQuestion) ? QuestionData.selectedQuestion : "";
         }
-    }
-
-
-    // Update is called once per frame
-    void Update()
-    {
-
-
     }
 
 
@@ -81,18 +70,18 @@ public class MainAIMLScript : MonoBehaviour
 
     void LoadFilesFromConfigFolder()
     {
-        GlobalSettings = Resources.Load<TextAsset>("config/Settings");
-        GenderSubstitutions = Resources.Load<TextAsset>("config/GenderSubstitutions");
-        Person2Substitutions = Resources.Load<TextAsset>("config/Person2Substitutions");
-        PersonSubstitutions = Resources.Load<TextAsset>("config/PersonSubstitutions");
-        Substitutions = Resources.Load<TextAsset>("config/Substitutions");
-        DefaultPredicates = Resources.Load<TextAsset>("config/DefaultPredicates");
-        Splitters = Resources.Load<TextAsset>("config/Splitters");
+        GlobalSettings = Resources.Load<TextAsset>("AIMLBot/config/Settings");
+        GenderSubstitutions = Resources.Load<TextAsset>("AIMLBot/config/GenderSubstitutions");
+        Person2Substitutions = Resources.Load<TextAsset>("AIMLBot/config/Person2Substitutions");
+        PersonSubstitutions = Resources.Load<TextAsset>("AIMLBot/config/PersonSubstitutions");
+        Substitutions = Resources.Load<TextAsset>("AIMLBot/config/Substitutions");
+        DefaultPredicates = Resources.Load<TextAsset>("AIMLBot/config/DefaultPredicates");
+        Splitters = Resources.Load<TextAsset>("AIMLBot/config/Splitters");
     }
 
     void TextAssetToXmlDocumentAIMLFiles()
     {
-        aimlFiles = Resources.LoadAll<TextAsset>("aiml");
+        aimlFiles = Resources.LoadAll<TextAsset>("AIMLBot/xmls");
         foreach (TextAsset aimlFile in aimlFiles)
         {
             try
@@ -114,6 +103,5 @@ public class MainAIMLScript : MonoBehaviour
     {
         bot.SaveBrain();
     }
-
 
 }

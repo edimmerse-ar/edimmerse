@@ -293,7 +293,6 @@ GameObject:
   - component: {fileID: 581916621}
   - component: {fileID: 581916620}
   - component: {fileID: 581916619}
-  - component: {fileID: 581916623}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -383,20 +382,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &581916623
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 581916618}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c4e52fbe8bd3bf64db3642a949f8cebd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  InputBox: {fileID: 771908999}
-  OutputBox: {fileID: 1980773899}
 --- !u!1 &771908997
 GameObject:
   m_ObjectHideFlags: 0
@@ -409,7 +394,6 @@ GameObject:
   - component: {fileID: 771909001}
   - component: {fileID: 771909000}
   - component: {fileID: 771908999}
-  - component: {fileID: 771909002}
   m_Layer: 5
   m_Name: InputBox
   m_TagString: Untagged
@@ -544,22 +528,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 771908997}
   m_CullTransparentMesh: 1
---- !u!114 &771909002
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 771908997}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc33c1bd62d5e9140ae519556b39c700, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  OnTyping: {fileID: 21300000, guid: 391e1bca654349a44ab94046bd9c0344, type: 3}
-  OnClear: {fileID: 21300000, guid: f5865c3d14960e54e9ba368dfd5b6b13, type: 3}
-  input: {fileID: 771908999}
-  TargetImage: {fileID: 0}
 --- !u!1 &942488402
 GameObject:
   m_ObjectHideFlags: 0
@@ -572,7 +540,6 @@ GameObject:
   - component: {fileID: 942488405}
   - component: {fileID: 942488404}
   - component: {fileID: 942488403}
-  - component: {fileID: 942488408}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -663,19 +630,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!114 &942488408
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 942488402}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9c89a375539ff3c45b4cf371c7e0fdf1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  InputBox: {fileID: 0}
 --- !u!1 &1191606321
 GameObject:
   m_ObjectHideFlags: 0
@@ -1093,7 +1047,7 @@ PrefabInstance:
     - target: {fileID: 1539870414520092269, guid: 029edc430f9e9524aaeaebe7b24a650e, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 942488408}
+      objectReference: {fileID: 0}
     - target: {fileID: 1539870414520092269, guid: 029edc430f9e9524aaeaebe7b24a650e, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: GoToScene
@@ -1460,7 +1414,7 @@ GameObject:
   - component: {fileID: 2094370294}
   - component: {fileID: 2094370293}
   m_Layer: 5
-  m_Name: Button
+  m_Name: sendBtn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1530,8 +1484,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 581916623}
-        m_TargetAssemblyTypeName: 
+      - m_Target: {fileID: 2135577026}
+        m_TargetAssemblyTypeName: MainAIMLScript, Assembly-CSharp
         m_MethodName: SendQuestionToRobot
         m_Mode: 1
         m_Arguments:
@@ -1580,6 +1534,52 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2094370291}
   m_CullTransparentMesh: 1
+--- !u!1 &2135577025
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2135577027}
+  - component: {fileID: 2135577026}
+  m_Layer: 0
+  m_Name: AIMLController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2135577026
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2135577025}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4e52fbe8bd3bf64db3642a949f8cebd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  InputBox: {fileID: 771908999}
+  OutputBox: {fileID: 1980773899}
+--- !u!4 &2135577027
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2135577025}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 33, y: 231.7383, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -1587,3 +1587,4 @@ SceneRoots:
   - {fileID: 581916622}
   - {fileID: 942488406}
   - {fileID: 1191606324}
+  - {fileID: 2135577027}

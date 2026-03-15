@@ -78,6 +78,6 @@ EditorBuildSettings:
     path: Assets/AIMLBot/Scenes/23_botL5.unity
     guid: 7c2bfbc9f3bec6a42b8003a0e972ab80
   - enabled: 1
-    path: Assets/AIMLBot/Scenes/24_botMain.unity
+    path: Assets/AIMLBot/Scenes/botMain.unity
     guid: 970e04598c7eca048a7071158d018d32
   m_configObjects: {}

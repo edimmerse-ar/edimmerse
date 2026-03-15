@@ -37,20 +37,27 @@ public class DIYProjectHandler : MonoBehaviour
         LoadProject(0);
     }
 
-    /// <summary>
-    /// Load project content by index. Title is taken from the `titles` array if present;
-    /// description is taken from `descriptionAssets[index]` if present, otherwise it will
-    /// attempt to load a TextAsset from Resources using `descriptionResourceNames[index]`.
-    /// </summary>
-    public void LoadProject(int index)
+    public static int projectId = -1;
+
+    public void resetProjectId()
+    {
+		DIYProjectHandler.projectId = -1;
+	}
+
+	/// <summary>
+	/// Load project content by index. Title is taken from the `titles` array if present;
+	/// description is taken from `descriptionAssets[index]` if present, otherwise it will
+	/// attempt to load a TextAsset from Resources using `descriptionResourceNames[index]`.
+	/// </summary>
+	public void LoadProject(int index)
     {
         if (titleText == null && descriptionText == null)
         {
             Debug.LogWarning("DIYProjectHandler: No TextMeshProUGUI targets assigned.");
             return;
         }
-
-        string rawTitle = null;
+        DIYProjectHandler.projectId = index;
+		string rawTitle = null;
         string rawDesc = null;
 
         if (titles != null && index >= 0 && index < titles.Length)
