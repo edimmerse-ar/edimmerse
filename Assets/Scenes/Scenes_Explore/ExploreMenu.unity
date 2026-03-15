@@ -207,15 +207,15 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 90
-  m_fontSizeBase: 90
+  m_fontSize: 50
+  m_fontSizeBase: 50
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 1
-  m_HorizontalAlignment: 1
-  m_VerticalAlignment: 256
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -435,15 +435,15 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 90
-  m_fontSizeBase: 90
+  m_fontSize: 50
+  m_fontSizeBase: 50
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 1
-  m_HorizontalAlignment: 1
-  m_VerticalAlignment: 256
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -512,15 +512,16 @@ RectTransform:
   m_GameObject: {fileID: 175250314}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 13, y: 9, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 282469872}
   m_Father: {fileID: 2095509549}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 4, y: -94}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchorMin: {x: 0.17575, y: 0.035185184}
+  m_AnchorMax: {x: 0.8167085, y: 0.79229635}
+  m_AnchoredPosition: {x: 2.2841797, y: -1.0001221}
+  m_SizeDelta: {x: -5.497589, y: -3.2287006}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &175250316
 MonoBehaviour:
@@ -660,17 +661,21 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 282469871}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.8, y: 0.8, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 2095509549}
+  m_Children:
+  - {fileID: 1536675258}
+  - {fileID: 334881363}
+  - {fileID: 2132238998}
+  - {fileID: 299510573}
+  m_Father: {fileID: 175250315}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 5, y: -88.99999}
-  m_SizeDelta: {x: 1536, y: 1024}
+  m_AnchorMin: {x: 0.042735077, y: 0.04063308}
+  m_AnchorMax: {x: 0.9681671, y: 0.9681392}
+  m_AnchoredPosition: {x: 4.500061, y: -3.5}
+  m_SizeDelta: {x: 4.952881, y: 2.2094116}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &282469873
 MonoBehaviour:
@@ -728,7 +733,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &299510573
 RectTransform:
   m_ObjectHideFlags: 0
@@ -738,16 +743,16 @@ RectTransform:
   m_GameObject: {fileID: 299510572}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 160336199}
-  m_Father: {fileID: 2095509549}
+  m_Father: {fileID: 282469872}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -379, y: -126.99999}
-  m_SizeDelta: {x: 219.2756, y: 211}
+  m_AnchorMin: {x: 0.18339373, y: 0.44900003}
+  m_AnchorMax: {x: 0.18339373, y: 0.44900003}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 107.7064, y: 105.9142}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &299510575
 MonoBehaviour:
@@ -793,8 +798,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: ChangeScene, Assembly-CSharp
+      - m_Target: {fileID: 1662189066}
+        m_TargetAssemblyTypeName: SceneHandler, Assembly-CSharp
         m_MethodName: GoToScene
         m_Mode: 5
         m_Arguments:
@@ -940,7 +945,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &334881363
 RectTransform:
   m_ObjectHideFlags: 0
@@ -950,16 +955,16 @@ RectTransform:
   m_GameObject: {fileID: 334881362}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1154366129}
-  m_Father: {fileID: 2095509549}
+  m_Father: {fileID: 282469872}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -165, y: -313}
-  m_SizeDelta: {x: 219.2756, y: 211}
+  m_AnchorMin: {x: 0.3633798, y: 0.22188243}
+  m_AnchorMax: {x: 0.3633798, y: 0.22188243}
+  m_AnchoredPosition: {x: -0.000030517578, y: -0.000015258789}
+  m_SizeDelta: {x: 107.7064, y: 105.9142}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &334881365
 MonoBehaviour:
@@ -1005,8 +1010,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: ChangeScene, Assembly-CSharp
+      - m_Target: {fileID: 1662189066}
+        m_TargetAssemblyTypeName: SceneHandler, Assembly-CSharp
         m_MethodName: GoToScene
         m_Mode: 5
         m_Arguments:
@@ -2233,15 +2238,15 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 90
-  m_fontSizeBase: 90
+  m_fontSize: 50
+  m_fontSizeBase: 50
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 1
-  m_HorizontalAlignment: 1
-  m_VerticalAlignment: 256
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -2625,15 +2630,15 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 90
-  m_fontSizeBase: 90
+  m_fontSize: 50
+  m_fontSizeBase: 50
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 1
-  m_HorizontalAlignment: 1
-  m_VerticalAlignment: 256
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -2693,7 +2698,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1536675258
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2703,16 +2708,16 @@ RectTransform:
   m_GameObject: {fileID: 1536675257}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 10257832}
-  m_Father: {fileID: 2095509549}
+  m_Father: {fileID: 282469872}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -396, y: -424}
-  m_SizeDelta: {x: 219.2756, y: 211}
+  m_AnchorMin: {x: 0.177, y: 0.090823}
+  m_AnchorMax: {x: 0.177, y: 0.090823}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 108.1975, y: 105.9142}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1536675260
 MonoBehaviour:
@@ -2758,8 +2763,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: ChangeScene, Assembly-CSharp
+      - m_Target: {fileID: 1662189066}
+        m_TargetAssemblyTypeName: SceneHandler, Assembly-CSharp
         m_MethodName: GoToScene
         m_Mode: 5
         m_Arguments:
@@ -2903,10 +2908,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 2095509549}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1920, y: 1080}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1828334364
 MonoBehaviour:
@@ -3157,10 +3162,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 2095509549}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1920, y: 1080}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2092894636
 MonoBehaviour:
@@ -3298,14 +3303,9 @@ RectTransform:
   - {fileID: 2092894635}
   - {fileID: 1828334363}
   - {fileID: 175250315}
-  - {fileID: 282469872}
   - {fileID: 1221261167}
   - {fileID: 697177903}
   - {fileID: 1108443822}
-  - {fileID: 1536675258}
-  - {fileID: 334881363}
-  - {fileID: 2132238998}
-  - {fileID: 299510573}
   - {fileID: 1255720914}
   - {fileID: 729551282}
   - {fileID: 423914256}
@@ -3356,7 +3356,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &2132238998
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3366,16 +3366,16 @@ RectTransform:
   m_GameObject: {fileID: 2132238997}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1300716678}
-  m_Father: {fileID: 2095509549}
+  m_Father: {fileID: 282469872}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -84, y: -207}
-  m_SizeDelta: {x: 219.2756, y: 211}
+  m_AnchorMin: {x: 0.42334846, y: 0.358}
+  m_AnchorMax: {x: 0.42334846, y: 0.358}
+  m_AnchoredPosition: {x: 0.000015258789, y: -1.262497}
+  m_SizeDelta: {x: 107.7064, y: 105.4123}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2132239000
 MonoBehaviour:
@@ -3421,8 +3421,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: ChangeScene, Assembly-CSharp
+      - m_Target: {fileID: 1662189066}
+        m_TargetAssemblyTypeName: SceneHandler, Assembly-CSharp
         m_MethodName: GoToScene
         m_Mode: 5
         m_Arguments:

@@ -17,5 +17,7 @@ public class LevelManager : MonoBehaviour
         {
             levels[i].SetActive(i < unlock);
         }
-    }
+
+        SceneHandler.lastSceneName = "ExploreMenu";
+	}
 }
