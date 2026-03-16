@@ -157,6 +157,7 @@ public class CodeEditor1 : MonoBehaviour
             return;
         }
 
+		PlayerPrefs.SetInt("unlock", 2);
 		updateScore.Submit(10);
 		// All validations passed - code is correct!
 		ShowToast("Great job! Your code is correct. Running program...");

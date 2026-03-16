@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class LevelManager : MonoBehaviour
 {
@@ -7,17 +8,33 @@ public class LevelManager : MonoBehaviour
     void Start()
     {
         // Fetch unlock value from PlayerPrefs
-        int unlock = PlayerPrefs.GetInt("unlock", 1); // Default to 1 if not set
+        int unlock = PlayerPrefs.GetInt("unlock", 1);
 
-        // Clamp the value to not exceed array bounds
-        unlock = Mathf.Clamp(unlock, 0, levels.Length);
-
-        // Activate the first 'unlock' levels, deactivate the rest
-        for (int i = 0; i < levels.Length; i++)
+        // If no levels configured, nothing to do
+        if (levels == null || levels.Length == 0)
         {
-            levels[i].SetActive(i < unlock);
+            SceneHandler.lastSceneName = "ExploreMenu";
+            return;
         }
 
-        SceneHandler.lastSceneName = "ExploreMenu";
+        // Clamp the value to valid array indices (0 .. levels.Length-1)
+        unlock = Mathf.Clamp(unlock, 0, levels.Length - 1);
+
+        GameObject levelGameObject = levels[unlock-1];
+
+        if (levelGameObject != null)
+        {
+            var image = levelGameObject.GetComponent<Image>();
+            if (image != null)
+                image.color = new Color(1f, 0f, 0f);
+        }
+		// Activate the first 'unlock' levels, deactivate the rest
+		//for (int i = 0; i < levels.Length; i++)
+		//{
+
+		//levels[i].SetActive(i < unlock);
+		//}
+
+		SceneHandler.lastSceneName = "ExploreMenu";
 	}
 }

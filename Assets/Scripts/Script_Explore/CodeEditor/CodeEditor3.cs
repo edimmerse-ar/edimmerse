@@ -225,6 +225,7 @@ public class CodeEditor3 : MonoBehaviour
             return;
         }
 
+		PlayerPrefs.SetInt("unlock", 4);
 		updateScore.Submit(10);
 		// All validations passed - code is correct!
 		ShowToast("Great job! Your code is correct. Program running, next you can move obstacle.");
