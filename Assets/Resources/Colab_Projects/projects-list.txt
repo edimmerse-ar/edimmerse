@@ -1,0 +1,12 @@
+# projectId|ProjectEnumName|ProjectUIName|Components
+
+1|SmartLighting|Smart Lighting Circuit|arduino,ldr,led
+2|MotionSecurity|Motion-Based Security System|arduino,pir,buzzer
+3|AutoLightController|Automatic Room Light Controller|arduino,pir,led
+4|TempFan|Temperature Controlled Fan|arduino,dh,dcmotor
+5|TouchlessDoorbell|Touchless Doorbell System|arduino,ir,buzzer
+6|WaterLevel|Automatic Water Level Monitoring|arduino,ultrasonic,dcmotor
+7|ContactlessDoor|Contactless Doorway|arduino,ultrasonic,servomotor
+8|SmartCurtain|Smart Curtain Controller|arduino,ldr,servomotor
+9|NightPathLighting|Emergency Night Path Lighting|arduino,pir,led
+10|SmartParking|Smart Parking Garage Assistant|arduino,ultrasonic,led
