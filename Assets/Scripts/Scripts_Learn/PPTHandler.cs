@@ -16,7 +16,10 @@ public class PPTHandler : MonoBehaviour
 	public Button nextBtn;
 
 	public UpdateScore updateScore;
-	private bool scoreUpdate = false; 
+	private bool scoreUpdate = false;
+
+	public GameObject ppt;
+
 	void Start()
 	{
 		// Load the first slide
@@ -70,6 +73,7 @@ public class PPTHandler : MonoBehaviour
 			nextBtn.interactable = (false);
 			if(!scoreUpdate) updateScore.Submit(5);
 			scoreUpdate = true;
+			ppt.SetActive(true);
 		}
 		else
 		{

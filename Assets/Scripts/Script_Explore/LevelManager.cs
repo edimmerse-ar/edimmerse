@@ -7,20 +7,32 @@ public class LevelManager : MonoBehaviour
 
     void Start()
     {
-        // Fetch unlock value from PlayerPrefs
         int unlock = PlayerPrefs.GetInt("unlock", 1);
 
-        // If no levels configured, nothing to do
+
         if (levels == null || levels.Length == 0)
         {
             SceneHandler.lastSceneName = "ExploreMenu";
             return;
         }
 
-        // Clamp the value to valid array indices (0 .. levels.Length-1)
         unlock = Mathf.Clamp(unlock, 0, levels.Length - 1);
 
-        GameObject levelGameObject = levels[unlock-1];
+        int levelIndex = unlock - 1;
+
+        int i = 0;
+		foreach (var item in levels)
+		{
+			Button itemBtn = item.GetComponent<Button>();
+            itemBtn.interactable = false;
+            if(i <= levelIndex)
+            {
+                itemBtn.interactable = true;
+			}
+			i++;
+		}
+
+		GameObject levelGameObject = levels[levelIndex];
 
         if (levelGameObject != null)
         {
@@ -28,13 +40,7 @@ public class LevelManager : MonoBehaviour
             if (image != null)
                 image.color = new Color(1f, 0f, 0f);
         }
-		// Activate the first 'unlock' levels, deactivate the rest
-		//for (int i = 0; i < levels.Length; i++)
-		//{
-
-		//levels[i].SetActive(i < unlock);
-		//}
-
+		
 		SceneHandler.lastSceneName = "ExploreMenu";
 	}
 }

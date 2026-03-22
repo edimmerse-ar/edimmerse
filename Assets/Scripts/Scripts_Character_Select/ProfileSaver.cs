@@ -70,10 +70,10 @@ public class ProfileSaver : MonoBehaviour
 			return;
 		}
 
-		if (!IsValidEmail(mail))
-		{
-			return;
-		}
+		//if (!IsValidEmail(mail))
+		//{
+		//	return;
+		//}
 
 		PlayerPrefs.SetString("username", name);
 		PlayerPrefs.SetString("age", age);
@@ -121,10 +121,10 @@ public class ProfileSaver : MonoBehaviour
             // No focused field specified - show first failing message
             if (!validUsername) warning = string.IsNullOrEmpty(username) ? "Enter username." : "Username too short.";
             else if (!validAge) warning = "Enter a valid age.";
-            else if (!validEmail) warning = "Enter a valid email.";
+            //else if (!validEmail) warning = "Enter a valid email.";
         }
 
-        nextButtonInfo.interactable = validUsername && validAge && validEmail;
+        nextButtonInfo.interactable = validUsername && validAge;
         warningText.text = warning;
     }
 

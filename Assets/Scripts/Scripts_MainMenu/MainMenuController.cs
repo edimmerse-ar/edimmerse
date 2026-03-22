@@ -34,11 +34,11 @@ public class MainMenuController : MonoBehaviour
 			return;
 		}
 
-		if (!IsValidEmail(mail))
-		{
-			sceneHandler.GoToScene("CharacterSelect");
-			return;
-		}
+		//if (!IsValidEmail(mail))
+		//{
+		//	sceneHandler.GoToScene("CharacterSelect");
+		//	return;
+		//}
 
 		sceneHandler.GoToScene("ModeMenu");
 

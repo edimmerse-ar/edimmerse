@@ -133,39 +133,44 @@ public class LearnController : MonoBehaviour
 
 	void InitializeExperiments()
 	{
+		// 1. Automatic Night Light
 		experiments.Add(new Experiment()
 		{
-			experimentName = "Glow LED with Arduino",
-			requiredComponents = new List<string> { "Arduino", "LED", "Resistor", "Wires" },
-			message = "Experiment Unlocked!\nYou can now build: Glow LED with Arduino."
+			experimentName = "Automatic Night Light",
+			requiredComponents = new List<string> { "Arduino", "LDRModule", "LED", "Resistor", "Wires", "Breadboard" },
+			message = "Experiment Unlocked!\nDesign a system that turns lights ON during the night and OFF during the day."
 		});
 
+		// 2. Motion-Sensing Light
 		experiments.Add(new Experiment()
 		{
-			experimentName = "Human Detection Alarm",
-			requiredComponents = new List<string> { "Arduino", "PIR", "Buzzer", "Wires" },
-			message = "Experiment Unlocked!\nBuild a Human Detection Alarm using PIR."
+			experimentName = "Motion-Sensing Light",
+			requiredComponents = new List<string> { "Arduino", "PIR", "LED", "Wires", "Breadboard" },
+			message = "Experiment Unlocked!\nLights will now turn ON when motion is detected and OFF when no one is present."
 		});
 
+		// 3. Touch-Free Doorbell
 		experiments.Add(new Experiment()
 		{
-			experimentName = "Distance Measurement",
-			requiredComponents = new List<string> { "Arduino", "UltrasonicSensor", "LCD", "Wires" },
-			message = "Experiment Unlocked!\nDisplay distance on LCD."
+			experimentName = "Touch-Free Doorbell",
+			requiredComponents = new List<string> { "Arduino", "IR", "Buzzer", "LED", "Wires", "Breadboard" },
+			message = "Experiment Unlocked!\nCreate a contactless doorbell that rings when someone waves their hand near the IR sensor."
 		});
 
+		// 4. Smart Fan System
 		experiments.Add(new Experiment()
 		{
-			experimentName = "Light Detection",
-			requiredComponents = new List<string> { "Arduino", "LDRModule", "LED", "Resistor" },
-			message = "Experiment Unlocked!\nCreate an Automatic Light System."
+			experimentName = "Smart Fan System",
+			requiredComponents = new List<string> { "Arduino", "Temprature", "DCMotor", "Wires" },
+			message = "Experiment Unlocked!\nDesign a system that automatically controls a fan based on room temperature."
 		});
 
+		// 5. Automatic Door System
 		experiments.Add(new Experiment()
 		{
-			experimentName = "Servo Door System",
-			requiredComponents = new List<string> { "Arduino", "ServoMotor", "Button", "Wires" },
-			message = "Experiment Unlocked!\nCreate a Servo Door Control."
+			experimentName = "Automatic Door System",
+			requiredComponents = new List<string> { "Arduino", "UltrasonicSensor", "ServoMotor", "LED", "Resistor", "Wires", "Breadboard" },
+			message = "Experiment Unlocked!\nBuild a door that opens automatically when someone approaches, using a Servo and Ultrasonic sensor."
 		});
 	}
 

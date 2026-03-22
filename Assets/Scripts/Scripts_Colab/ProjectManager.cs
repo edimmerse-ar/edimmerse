@@ -162,4 +162,9 @@ public class ProjectManager : MonoBehaviour
 	{
 		projectPanels.Add(panel);
 	}
+
+	public void LeaveRoom()
+	{
+				Photon.Pun.PhotonNetwork.LeaveRoom();
+	}
 }

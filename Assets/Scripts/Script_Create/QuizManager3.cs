@@ -97,7 +97,63 @@ public class QuizManager3 : MonoBehaviour
             correctOptionIndex = 1,
             questionImage = image3
         });
-    }
+
+		questions.Add(new Question
+		{
+			questionText = "What is an LED?",
+			options = new string[] { "A sensor that feels light", "A light that can turn on and off", "A motor that spins around" },
+			correctOptionIndex = 1,
+			questionImage = image3
+		});
+
+		questions.Add(new Question
+		{
+			questionText = "Why we write a program (code) for the Arduino?",
+			options = new string[] { "Set LED color", "Control LED on/off", "Change wires" },
+			correctOptionIndex = 1,
+			questionImage = image3
+		});
+
+		questions.Add(new Question
+		{
+			questionText = "Which function is used to continuously run code on the Arduino?",
+			options = new string[] { "setup()", "loop()", "start()" },
+			correctOptionIndex = 1,
+			questionImage = image3
+		});
+
+		questions.Add(new Question
+		{
+			questionText = "What does the delay(1000); command do?",
+			options = new string[] { "Turns off the LED", "Stops the program", "Pauses the program for 1 second" },
+			correctOptionIndex = 2,
+			questionImage = image3
+		});
+
+		questions.Add(new Question
+		{
+			questionText = "How does the IR sensor detect an object?",
+			options = new string[] { "By receiving reflected infrared light ", "By sensing the object’s color", "By detecting sound" },
+			correctOptionIndex = 0,
+			questionImage = image3
+		});
+
+		questions.Add(new Question
+		{
+			questionText = "When the IR sensor detects moving object, what does the Arduino do?",
+			options = new string[] { "Stops all sensors ", "Follows the object", "Activates an alarm" },
+			correctOptionIndex = 1,
+			questionImage = image3
+		});
+
+		questions.Add(new Question
+		{
+			questionText = "Why we use a breadboard in electronic projects?",
+			options = new string[] { "Project look pretty", "No soldering needed", "Charges the Arduino faster" },
+			correctOptionIndex = 1,
+			questionImage = image3
+		});
+	}
 
     void ShowQuestion()
     {

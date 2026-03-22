@@ -14,12 +14,13 @@ public class PhotonLauncher : MonoBehaviourPunCallbacks
 	{
 		PhotonNetwork.JoinOrCreateRoom(
 			"ExperimentRoom",
-			new RoomOptions { MaxPlayers = 10 },
+			new RoomOptions { MaxPlayers = 20 },
 			TypedLobby.Default
 		);
 	}
 
 	public override void OnJoinedRoom()
 	{
+
 	}
 }
