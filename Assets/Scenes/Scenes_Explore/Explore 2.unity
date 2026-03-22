@@ -1478,8 +1478,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: CodeEditor6, Assembly-CSharp
+      - m_Target: {fileID: 1697823533}
+        m_TargetAssemblyTypeName: CodeEditor2, Assembly-CSharp
         m_MethodName: editPinMode
         m_Mode: 3
         m_Arguments:
@@ -6202,8 +6202,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: CodeEditor6, Assembly-CSharp
+      - m_Target: {fileID: 1697823533}
+        m_TargetAssemblyTypeName: CodeEditor2, Assembly-CSharp
         m_MethodName: editDigitalWrite
         m_Mode: 3
         m_Arguments:
@@ -7334,8 +7334,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: CodeEditor6, Assembly-CSharp
+      - m_Target: {fileID: 1697823533}
+        m_TargetAssemblyTypeName: CodeEditor2, Assembly-CSharp
         m_MethodName: editDelay
         m_Mode: 3
         m_Arguments:
@@ -9517,8 +9517,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: CodeEditor6, Assembly-CSharp
+      - m_Target: {fileID: 1697823533}
+        m_TargetAssemblyTypeName: CodeEditor2, Assembly-CSharp
         m_MethodName: editDigitalWrite
         m_Mode: 3
         m_Arguments:
@@ -10439,8 +10439,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: CodeEditor6, Assembly-CSharp
+      - m_Target: {fileID: 1697823533}
+        m_TargetAssemblyTypeName: CodeEditor2, Assembly-CSharp
         m_MethodName: editDelay
         m_Mode: 3
         m_Arguments:
