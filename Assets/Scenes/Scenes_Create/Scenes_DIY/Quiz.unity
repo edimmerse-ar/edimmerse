@@ -8274,7 +8274,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.115395844, y: 0.250875}
   m_AnchorMax: {x: 0.90800005, y: 0.5}
-  m_AnchoredPosition: {x: -5.304016, y: -3.8600159}
+  m_AnchoredPosition: {x: -5.303955, y: -3.8600159}
   m_SizeDelta: {x: 707.574, y: 108.149994}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1594845410
@@ -8886,6 +8886,9 @@ MonoBehaviour:
   image1: {fileID: 21300000, guid: f7ad60868d88e674a8d44bc58587dcf9, type: 3}
   image2: {fileID: 21300000, guid: 630cf1c2e3d862d47beea0e69a086368, type: 3}
   image3: {fileID: 21300000, guid: 14fcb143a45a830438b2377cbddbc6aa, type: 3}
+  resisterImage: {fileID: 21300000, guid: 3c681467ad54b914e94bb8db3cf9b9bb, type: 3}
+  breadBoardImage: {fileID: 21300000, guid: 0f6559d5dab23444ebf393f025e51536, type: 3}
+  ledImage: {fileID: 21300000, guid: d5dff6aa3fac2ac4a9aab411e2a5fb5f, type: 3}
   updateScore: {fileID: 1772131669}
 --- !u!114 &1772131668
 MonoBehaviour:

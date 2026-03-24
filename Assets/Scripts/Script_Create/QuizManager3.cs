@@ -36,8 +36,12 @@ public class QuizManager3 : MonoBehaviour
     public Sprite image1;
     public Sprite image2;
     public Sprite image3;
+    public Sprite resisterImage;
+    public Sprite breadBoardImage;
+    public Sprite ledImage;
 
-    private List<Question> questions = new List<Question>();
+
+	private List<Question> questions = new List<Question>();
     private int currentQuestionIndex = 0;
     private int score = 0;
 
@@ -95,7 +99,7 @@ public class QuizManager3 : MonoBehaviour
             questionText = "Why do we use a resistor with an LED?",
             options = new string[] { "To make the LED change color", "To protect LED", "To increase the voltage" },
             correctOptionIndex = 1,
-            questionImage = image3
+            questionImage = resisterImage
         });
 
 		questions.Add(new Question
@@ -103,7 +107,7 @@ public class QuizManager3 : MonoBehaviour
 			questionText = "What is an LED?",
 			options = new string[] { "A sensor that feels light", "A light that can turn on and off", "A motor that spins around" },
 			correctOptionIndex = 1,
-			questionImage = image3
+			questionImage = ledImage
 		});
 
 		questions.Add(new Question
@@ -111,7 +115,7 @@ public class QuizManager3 : MonoBehaviour
 			questionText = "Why we write a program (code) for the Arduino?",
 			options = new string[] { "Set LED color", "Control LED on/off", "Change wires" },
 			correctOptionIndex = 1,
-			questionImage = image3
+			questionImage = image1
 		});
 
 		questions.Add(new Question
@@ -119,7 +123,7 @@ public class QuizManager3 : MonoBehaviour
 			questionText = "Which function is used to continuously run code on the Arduino?",
 			options = new string[] { "setup()", "loop()", "start()" },
 			correctOptionIndex = 1,
-			questionImage = image3
+			questionImage = image1
 		});
 
 		questions.Add(new Question
@@ -127,7 +131,7 @@ public class QuizManager3 : MonoBehaviour
 			questionText = "What does the delay(1000); command do?",
 			options = new string[] { "Turns off the LED", "Stops the program", "Pauses the program for 1 second" },
 			correctOptionIndex = 2,
-			questionImage = image3
+			questionImage = image1
 		});
 
 		questions.Add(new Question
@@ -146,12 +150,12 @@ public class QuizManager3 : MonoBehaviour
 			questionImage = image3
 		});
 
-		questions.Add(new Question
-		{
-			questionText = "Why we use a breadboard in electronic projects?",
-			options = new string[] { "Project look pretty", "No soldering needed", "Charges the Arduino faster" },
-			correctOptionIndex = 1,
-			questionImage = image3
+        questions.Add(new Question
+        {
+            questionText = "Why we use a breadboard in electronic projects?",
+            options = new string[] { "Project look pretty", "No soldering needed", "Charges the Arduino faster" },
+            correctOptionIndex = 1,
+            questionImage = breadBoardImage
 		});
 	}
 
