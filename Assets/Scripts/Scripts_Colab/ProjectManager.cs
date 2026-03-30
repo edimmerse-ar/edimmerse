@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Photon.Pun;
+using Photon.Realtime;
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using static ComponentManager;
@@ -16,7 +18,9 @@ public class ProjectManager : MonoBehaviour
 	public ProjectListUI projectListUI;
 
 	public GameObject gameComplete;
+	public GameObject loadingObject;
 
+	public SceneHandler sceneHandler;
 	void Awake()
 	{
 		Instance = this;
@@ -163,8 +167,23 @@ public class ProjectManager : MonoBehaviour
 		projectPanels.Add(panel);
 	}
 
-	public void LeaveRoom()
+
+	public void SafeExitPhoton()
 	{
-				Photon.Pun.PhotonNetwork.LeaveRoom();
+		loadingObject.SetActive(true);
+
+		if (PhotonNetwork.InRoom)
+		{
+			PhotonNetwork.LeaveRoom();
+			PhotonNetwork.Disconnect();
+		}
+		else if (PhotonNetwork.IsConnected)
+		{
+			PhotonNetwork.Disconnect();
+		}
+		else
+		{
+			sceneHandler.GoToScene("DIY");
+		}
 	}
 }

@@ -9,7 +9,6 @@ public class PlayerListUI : MonoBehaviourPunCallbacks
 {
 	public GameObject playerItemPrefab;
 	public Transform contentParent;
-	public GameObject loadingScreen;
 
 	public TextMeshProUGUI ranked;
 
@@ -89,8 +88,5 @@ public class PlayerListUI : MonoBehaviourPunCallbacks
 				ranked.text = "Ranked : " + i;
 			}
 		}
-
-		// loading screen logic (move outside loop)
-		loadingScreen.SetActive(PhotonNetwork.PlayerList.Length == 0);
 	}
 }
