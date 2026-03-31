@@ -7,8 +7,7 @@ public class LevelManager : MonoBehaviour
 
     void Start()
     {
-        int unlock = PlayerPrefs.GetInt("unlock", 1);
-
+		int unlock = PlayerPrefs.GetInt("unlock", 1);
 
         if (levels == null || levels.Length == 0)
         {
@@ -16,7 +15,7 @@ public class LevelManager : MonoBehaviour
             return;
         }
 
-        unlock = Mathf.Clamp(unlock, 0, levels.Length - 1);
+        unlock = Mathf.Clamp(unlock, 0, levels.Length);
 
         int levelIndex = unlock - 1;
 
