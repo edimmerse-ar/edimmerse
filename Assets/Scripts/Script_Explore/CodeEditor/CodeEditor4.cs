@@ -90,7 +90,7 @@ public class CodeEditor4 : MonoBehaviour
 
     void Update()
     {
-        if (RayFromTransformHitsBox(sensorTransform, obstacleBoxCollider, out RaycastHit hit, 10f))
+        if (RayFromTransformHitsBox(sensorTransform, obstacleBoxCollider, out RaycastHit hit, 10f) && isProgramRunning)
         {
             sensorSignalLed.SetActive(true);
 			led.SetActive(true);

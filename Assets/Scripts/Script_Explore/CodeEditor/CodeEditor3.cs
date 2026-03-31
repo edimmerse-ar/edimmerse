@@ -89,7 +89,7 @@ public class CodeEditor3 : MonoBehaviour
 
     void Update()
     {
-        if (RayFromTransformHitsBox(sensorTransform, obstacleBoxCollider, out RaycastHit hit, 10f) || !isProgramRunning)
+        if (RayFromTransformHitsBox(sensorTransform, obstacleBoxCollider, out RaycastHit hit, 10f) && isProgramRunning)
         {
             sensorSignalLed.SetActive(true);
             if (explore3.isToastActive()) return;
