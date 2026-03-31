@@ -9,7 +9,9 @@ public class PhotonLauncher : MonoBehaviourPunCallbacks
 	public List<RoomInfo> roomList = new List<RoomInfo>();
 	public RoomListUI roomListUI;
 
-	public TextMeshProUGUI roomNameInout;
+	public TMP_InputField roomNameInput;
+	private string roomName = null;
+
 	public GameObject loadingObject;
 	public GameObject roomPanel;
 
@@ -26,6 +28,8 @@ public class PhotonLauncher : MonoBehaviourPunCallbacks
 		PhotonNetwork.NickName = playerName;
 
 		Debug.Log("Player Name: " + playerName);
+
+		roomNameInput.onValueChanged.AddListener(OnRoomNameChanged);
 
 		PhotonNetwork.ConnectUsingSettings();
 	}
@@ -79,10 +83,13 @@ public class PhotonLauncher : MonoBehaviourPunCallbacks
 		roomListUI.UpdateRoomList(roomList);
 	}
 
+	void OnRoomNameChanged(string newName)
+	{
+		roomName = newName;
+	}
+
 	public void CreateRoom()
 	{
-		string roomName = roomNameInout.text.Trim();
-
 		// If empty → generate random name
 		if (string.IsNullOrEmpty(roomName))
 		{

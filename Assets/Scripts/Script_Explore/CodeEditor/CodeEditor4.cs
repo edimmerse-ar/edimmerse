@@ -136,8 +136,12 @@ public class CodeEditor4 : MonoBehaviour
 
     public void RunCode()
     {
-        // Check if hardware setup is complete before allowing to run
-        if (explore4 != null && !explore4.IsHardwareSetupComplete())
+		arduino13Led.SetActive(false);
+		sensorPowerLed.SetActive(false);
+		isProgramRunning = false;
+
+		// Check if hardware setup is complete before allowing to run
+		if (explore4 != null && !explore4.IsHardwareSetupComplete())
         {
 			updateScore.Submit(-1);
 			ShowToast("Please complete the hardware connection first before running the program.");

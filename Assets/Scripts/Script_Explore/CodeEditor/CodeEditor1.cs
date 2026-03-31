@@ -83,8 +83,11 @@ public class CodeEditor1 : MonoBehaviour
 
     public void RunCode()
     {
-        // Check if hardware setup is complete before allowing to run
-        if (explore1 != null && !explore1.IsHardwareSetupComplete())
+		// Stop any existing blinking coroutine
+		StopBlinking();
+
+		// Check if hardware setup is complete before allowing to run
+		if (explore1 != null && !explore1.IsHardwareSetupComplete())
         {
             updateScore.Submit(-1);
             ShowToast("Please complete the hardware connection first before running the program.");
@@ -170,9 +173,6 @@ public class CodeEditor1 : MonoBehaviour
 
     private void StartBlinking()
     {
-        // Stop any existing blinking coroutine
-        StopBlinking();
-        
         // Get delay values (in milliseconds, convert to seconds)
         float onDuration = delayStates[0] / 1000f;
         float offDuration = delayStates[1] / 1000f;

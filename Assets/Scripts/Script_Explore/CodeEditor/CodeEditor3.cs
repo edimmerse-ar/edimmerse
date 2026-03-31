@@ -89,7 +89,7 @@ public class CodeEditor3 : MonoBehaviour
 
     void Update()
     {
-        if (RayFromTransformHitsBox(sensorTransform, obstacleBoxCollider, out RaycastHit hit, 10f))
+        if (RayFromTransformHitsBox(sensorTransform, obstacleBoxCollider, out RaycastHit hit, 10f) || !isProgramRunning)
         {
             sensorSignalLed.SetActive(true);
             if (explore3.isToastActive()) return;
@@ -132,8 +132,12 @@ public class CodeEditor3 : MonoBehaviour
 
     public void RunCode()
     {
-        // Check if hardware setup is complete before allowing to run
-        if (explore3 != null && !explore3.IsHardwareSetupComplete())
+		arduino13Led.SetActive(false);
+		sensorPowerLed.SetActive(false);
+		isProgramRunning = false;
+
+		// Check if hardware setup is complete before allowing to run
+		if (explore3 != null && !explore3.IsHardwareSetupComplete())
         {
 			updateScore.Submit(-1);
 			ShowToast("Please complete the hardware connection first before running the program.");

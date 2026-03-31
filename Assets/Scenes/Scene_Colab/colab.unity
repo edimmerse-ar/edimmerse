@@ -11060,6 +11060,7 @@ MonoBehaviour:
   projectListUI: {fileID: 1024874785}
   gameComplete: {fileID: 1102653018}
   loadingObject: {fileID: 1557305086}
+  sceneHandler: {fileID: 0}
 --- !u!4 &1025204013
 Transform:
   m_ObjectHideFlags: 0
@@ -13247,7 +13248,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5636251}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -109.05542, y: 0.4948883}
+  m_AnchoredPosition: {x: -109.05542, y: 0.49490356}
   m_SizeDelta: {x: 218.1187, y: -0.77819824}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1309763283
@@ -14116,7 +14117,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   roomListUI: {fileID: 1357007210}
-  roomNameInout: {fileID: 196636569}
+  roomNameInput: {fileID: 1172948285}
   loadingObject: {fileID: 1557305086}
   roomPanel: {fileID: 1774582812}
   sceneHandler: {fileID: 176176161}
