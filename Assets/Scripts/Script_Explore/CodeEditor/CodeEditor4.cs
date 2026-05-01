@@ -92,7 +92,10 @@ public class CodeEditor4 : MonoBehaviour
     {
         if (RayFromTransformHitsBox(sensorTransform, obstacleBoxCollider, out RaycastHit hit, 10f) && isProgramRunning)
         {
-            sensorSignalLed.SetActive(true);
+			arduino13Led.SetActive(true);
+			lightMaterial.SetFloat("_Alpha", 1.0f);
+			sensorSignalLed.SetActive(true);
+
 			led.SetActive(true);
 
 			if (explore4.isToastActive()) return;
@@ -100,7 +103,9 @@ public class CodeEditor4 : MonoBehaviour
 		}
         else
         {
-            sensorSignalLed.SetActive(false);
+			arduino13Led.SetActive(false);
+			lightMaterial.SetFloat("_Alpha", 0.0f);
+			sensorSignalLed.SetActive(false);
             led.SetActive(false);
 		}
 

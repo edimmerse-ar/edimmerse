@@ -91,13 +91,18 @@ public class CodeEditor3 : MonoBehaviour
     {
         if (RayFromTransformHitsBox(sensorTransform, obstacleBoxCollider, out RaycastHit hit, 10f) && isProgramRunning)
         {
-            sensorSignalLed.SetActive(true);
+			arduino13Led.SetActive(true);
+			lightMaterial.SetFloat("_Alpha", 1.0f);
+
+			sensorSignalLed.SetActive(true);
             if (explore3.isToastActive()) return;
             ShowToast("Obstacle detected! The sensor reads HIGH.");
 		}
         else
         {
-            sensorSignalLed.SetActive(false);
+			arduino13Led.SetActive(false);
+			lightMaterial.SetFloat("_Alpha", 0.0f);
+			sensorSignalLed.SetActive(false);
 		}
 
 		if (!isProgramRunning) return;

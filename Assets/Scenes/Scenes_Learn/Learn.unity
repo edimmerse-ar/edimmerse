@@ -6887,7 +6887,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.068, y: 0.15300001}
   m_AnchorMax: {x: 0.9206727, y: 0.9112892}
-  m_AnchoredPosition: {x: -2.233307, y: 0.2732849}
+  m_AnchoredPosition: {x: -2.2332764, y: 0.2732849}
   m_SizeDelta: {x: -2.186699, y: -3.4934006}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &279231402
@@ -54955,7 +54955,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.28875002, y: 0.10916667}
   m_AnchorMax: {x: 0.73, y: 0.8182084}
-  m_AnchoredPosition: {x: -0.5, y: -0.5953064}
+  m_AnchoredPosition: {x: -0.5, y: -0.5952759}
   m_SizeDelta: {x: -0.43029785, y: 0.9477997}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &422977647
@@ -86558,7 +86558,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 200, y: 50}
+  m_SizeDelta: {x: 501.0073, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1746755996
 MonoBehaviour:
@@ -86580,7 +86580,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Scanning...
+  m_text: Scan components for gaining more knowledge/unlocking more circuits ...
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -86619,7 +86619,7 @@ MonoBehaviour:
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
-  m_lineSpacing: 0
+  m_lineSpacing: 10
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
