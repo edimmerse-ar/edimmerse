@@ -18,6 +18,8 @@ public class LoadingScreen : MonoBehaviour
 
 	private void ErrorCallback(string error)
 	{
+		int score = PlayerPrefs.GetInt("Score", 0);
+		GlobalVariables.score = score;
 		Debug.LogError(error);
 		sceneHandler.GoToScene("MainMenu");
 	}

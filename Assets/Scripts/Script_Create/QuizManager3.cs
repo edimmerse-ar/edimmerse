@@ -50,6 +50,8 @@ public class QuizManager3 : MonoBehaviour
 
     public UpdateScore updateScore;
 
+    public bool isQuizEnded = false;
+
 	void Start()
     {
         remainingTime = totalTime;
@@ -70,10 +72,11 @@ public class QuizManager3 : MonoBehaviour
             remainingTime -= Time.deltaTime;
             timerText.text = Mathf.Ceil(remainingTime).ToString() + "s";
         }
-        else
-        {
+        else if(!isQuizEnded)
+		{
             EndQuiz();
-        }
+            isQuizEnded = true;
+		}
     }
 
     void LoadQuestions()

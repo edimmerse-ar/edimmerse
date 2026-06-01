@@ -15992,7 +15992,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -93.875, y: -10.251}
+  m_AnchoredPosition: {x: -93.875, y: -10.250977}
   m_SizeDelta: {x: 60, y: 60}
   m_Pivot: {x: 1, y: 1}
 --- !u!114 &826529258
@@ -17283,7 +17283,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 37.700012, y: -26.899994}
+  m_AnchoredPosition: {x: 37.69995, y: -26.900024}
   m_SizeDelta: {x: 80, y: 96}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &865460089
@@ -26942,7 +26942,7 @@ GameObject:
   - component: {fileID: 1356994984}
   - component: {fileID: 1356994987}
   - component: {fileID: 1356994986}
-  - component: {fileID: 1356994985}
+  - component: {fileID: 1356994988}
   m_Layer: 0
   m_Name: ImageTarget
   m_TagString: hanger
@@ -26982,25 +26982,6 @@ Transform:
   - {fileID: 1603599266}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1356994985
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1356994983}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mObserverBehaviour: {fileID: 1356994987}
-  mHiddenRoot: {fileID: 0}
-  mTargetName: arduinouno
-  mDatasetName: Vuforia/EDEM.xml
-  mCastedBehaviour: {fileID: 1356994987}
-  mMeshFilter: {fileID: 0}
-  mMeshRenderer: {fileID: 0}
 --- !u!114 &1356994986
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27095,7 +27076,26 @@ MonoBehaviour:
   mMotionHint: 1
   mTrackingOptimization: 0
   mTrackingOptimizationNeedsUpgrade: 0
-  mPreview: {fileID: 1356994985}
+  mPreview: {fileID: 1356994988}
+--- !u!114 &1356994988
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1356994983}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mObserverBehaviour: {fileID: 1356994987}
+  mHiddenRoot: {fileID: 0}
+  mTargetName: arduinouno
+  mDatasetName: Vuforia/EDEM.xml
+  mCastedBehaviour: {fileID: 1356994987}
+  mMeshFilter: {fileID: 0}
+  mMeshRenderer: {fileID: 0}
 --- !u!1 &1358476576
 GameObject:
   m_ObjectHideFlags: 0
@@ -32623,9 +32623,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1603599265}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4c1c3d78d28750547aa269e0db5f3d8b, type: 3}
+  m_Script: {fileID: 11500000, guid: ec5b86090e372764f94736ad4e0761da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  allowedAxis: 2
 --- !u!1 &1605890018
 GameObject:
   m_ObjectHideFlags: 0
@@ -33926,7 +33927,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -55.429993, y: -76.109985}
+  m_AnchoredPosition: {x: -55.42993, y: -76.109985}
   m_SizeDelta: {x: 102.850006, y: 28.391998}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1651891782

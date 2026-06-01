@@ -21,6 +21,8 @@ public class GlobalVariables : MonoBehaviour
 		{
 			Debug.Log("update leaderboard score" + GlobalVariables.sessionScore);
 			Leaderboards.EdImmerse.UploadNewEntry(PlayerName, GlobalVariables.sessionScore, GlobalVariables.Callback, GlobalVariables.ErrorCallback);
+			PlayerPrefs.SetInt("Score", GlobalVariables.sessionScore);
+			PlayerPrefs.Save();
 			GlobalVariables.score = GlobalVariables.sessionScore;
 		}
 	}
